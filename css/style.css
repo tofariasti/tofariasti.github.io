@@ -747,6 +747,95 @@ body.lang-pt .timeline-en {
   cursor: not-allowed;
 }
 
+/* Drone portfolio */
+.drone-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.drone-about .section-lead {
+  margin-bottom: 1.25rem;
+}
+
+.drone-portfolio {
+  display: grid;
+  gap: 1rem;
+}
+
+.drone-card {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.drone-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.drone-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.drone-card--youtube .drone-card__icon {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff4444;
+}
+
+.drone-card--youtube:hover {
+  border-color: rgba(255, 68, 68, 0.5);
+}
+
+.drone-card--instagram .drone-card__icon {
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.2), rgba(131, 58, 180, 0.2));
+  color: #e1306c;
+}
+
+.drone-card--instagram:hover {
+  border-color: rgba(225, 48, 108, 0.45);
+}
+
+.drone-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.drone-card__body strong {
+  font-size: 1.05rem;
+}
+
+.drone-card__handle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.drone-card__cta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .drone-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* Education */
 .edu-grid {
   display: grid;
