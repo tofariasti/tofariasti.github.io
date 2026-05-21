@@ -62,6 +62,24 @@ document.querySelectorAll('.lang-btn').forEach((btn) => {
   btn.addEventListener('click', () => setLang(btn.dataset.lang));
 });
 
+function updateHeaderHeight() {
+  const header = document.getElementById('header');
+  if (!header) return;
+  document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+}
+
+function closeMobileNav() {
+  const menuHamburguer = document.querySelector('.menu-hamburguer');
+  const navResponsive = document.querySelector('.nav-responsive');
+  if (!menuHamburguer || !navResponsive) return;
+  navResponsive.classList.remove('active');
+  menuHamburguer.classList.remove('change');
+  menuHamburguer.setAttribute('aria-expanded', 'false');
+  navResponsive.hidden = true;
+  document.body.classList.remove('nav-menu-open');
+  updateHeaderHeight();
+}
+
 const menuHamburguer = document.querySelector('.menu-hamburguer');
 const navResponsive = document.querySelector('.nav-responsive');
 
@@ -71,17 +89,23 @@ if (menuHamburguer && navResponsive) {
     menuHamburguer.classList.toggle('change', open);
     menuHamburguer.setAttribute('aria-expanded', open ? 'true' : 'false');
     navResponsive.hidden = !open;
+    document.body.classList.toggle('nav-menu-open', open);
+    updateHeaderHeight();
   });
 }
 
 document.querySelectorAll('.nav-responsive a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navResponsive.classList.remove('active');
-    menuHamburguer.classList.remove('change');
-    menuHamburguer.setAttribute('aria-expanded', 'false');
-    navResponsive.hidden = true;
-  });
+  link.addEventListener('click', closeMobileNav);
 });
+
+window.addEventListener('resize', updateHeaderHeight, { passive: true });
+window.addEventListener('load', updateHeaderHeight);
+if (typeof ResizeObserver !== 'undefined') {
+  const headerEl = document.getElementById('header');
+  if (headerEl) {
+    new ResizeObserver(updateHeaderHeight).observe(headerEl);
+  }
+}
 
 const header = document.getElementById('header');
 window.addEventListener(
