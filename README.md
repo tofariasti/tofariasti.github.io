@@ -58,7 +58,7 @@ python3 -m http.server 8080
 - **Desenvolvimento:** https://tofariasti.github.io/
 - **Drone (Tech Drone 360):** https://tofariasti.github.io/drone.html
 
-Use as abas **Desenvolvimento** / **Drone** no topo para alternar entre as duas áreas.
+Use as abas **Desenvolvedor de Software** / **Operador de Drone** no topo para alternar entre as duas áreas.
 
 ## Contactos no site
 
