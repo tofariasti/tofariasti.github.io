@@ -134,6 +134,50 @@ header.scrolled .nav-floating {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.5rem 0.85rem;
+  flex-wrap: wrap;
+}
+
+.nav-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.site-tabs {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.site-tabs--mobile {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.site-tab {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-tab:hover {
+  color: var(--accent);
+}
+
+.site-tab--active {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.nav-desktop--compact {
+  gap: 1rem;
 }
 
 .logo {
@@ -745,6 +789,45 @@ body.lang-pt .timeline-en {
 .portfolio-nav:disabled {
   opacity: 0.35;
   cursor: not-allowed;
+}
+
+/* Drone page */
+.page-drone .hero--drone {
+  background: radial-gradient(ellipse 70% 50% at 30% 30%, rgba(34, 211, 238, 0.1), transparent),
+    var(--bg);
+}
+
+.hero-grid--drone {
+  align-items: stretch;
+}
+
+.hero-visual--drone {
+  display: flex;
+  align-items: center;
+}
+
+.drone-portfolio--hero {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .hero-grid--drone {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-brand-group {
+    flex: 1 1 100%;
+    justify-content: space-between;
+  }
+
+  .site-tab {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.5rem;
+  }
 }
 
 /* Drone portfolio */

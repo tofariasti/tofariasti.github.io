@@ -7,7 +7,8 @@ Site estático de currículo publicado em [GitHub Pages](https://pages.github.co
 ## Estrutura
 
 ```
-├── index.html          # Página principal (PT/EN)
+├── index.html          # Portfólio desenvolvimento (PT/EN)
+├── drone.html          # Portfólio Tech Drone 360 (página separada)
 ├── css/style.css       # Estilos
 ├── js/script.js        # Idioma, menu, carrossel, cookies
 ├── img/favicon.svg     # Ícone
@@ -51,6 +52,13 @@ Abra `index.html` com um servidor local (evita problemas de CORS em alguns brows
 python3 -m http.server 8080
 # http://localhost:8080
 ```
+
+## Páginas
+
+- **Desenvolvimento:** https://tofariasti.github.io/
+- **Drone (Tech Drone 360):** https://tofariasti.github.io/drone.html
+
+Use as abas **Desenvolvimento** / **Drone** no topo para alternar entre as duas áreas.
 
 ## Contactos no site
 
