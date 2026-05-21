@@ -20,40 +20,42 @@
   <header id="header">
     <div class="header-bar-wrap">
       <div class="container nav-floating">
-        <nav class="nav-wrapper" aria-label="Principal">
-          <div class="nav-brand-group">
-            <a href="index.html" class="logo" aria-label="Tiago O. de Farias — início">
-              <img src="img/favicon.svg" alt="" width="32" height="32" class="logo-icon">
-              <span class="logo-text">Tiago O. de Farias</span>
+        <div class="nav-top">
+          <div class="site-tabs" role="navigation" aria-label="Área do site">
+            <a href="index.html" class="site-tab site-tab--active" aria-current="page" title="Portfólio desenvolvimento">
+              <span class="site-tab__full t--pt">Desenvolvimento</span><span class="site-tab__full t--en">Development</span>
+              <span class="site-tab__short" aria-hidden="true">Dev</span>
             </a>
-            <div class="site-tabs" role="navigation" aria-label="Área do site">
-              <a href="index.html" class="site-tab site-tab--active" aria-current="page">
-                <span class="t--pt">Desenvolvimento</span><span class="t--en">Development</span>
-              </a>
-              <a href="drone.html" class="site-tab">
-                <span class="t--pt">Drone</span><span class="t--en">Drone</span>
-              </a>
-            </div>
+            <a href="drone.html" class="site-tab" title="Tech Drone 360">
+              <span class="site-tab__full t--pt">Drone</span><span class="site-tab__full t--en">Drone</span>
+              <span class="site-tab__short" aria-hidden="true">Drone</span>
+            </a>
           </div>
+          <div class="lang-switch" role="group" aria-label="Idioma">
+            <button type="button" class="lang-btn lang-btn--active" data-lang="pt" aria-pressed="true">PT</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+        <nav class="nav-wrapper" aria-label="Principal">
+          <a href="index.html" class="logo" aria-label="Tiago O. de Farias — início">
+            <img src="img/favicon.svg" alt="" width="36" height="36" class="logo-icon">
+            <span class="logo-text">Tiago O. de Farias</span>
+          </a>
           <ul class="nav-desktop">
             <li><a href="#sobre"><span class="t--pt">Sobre</span><span class="t--en">About</span></a></li>
-            <li><a href="#destaques-recrutador"><span class="t--pt">Principais</span><span class="t--en">Key points</span></a></li>
+            <li><a href="#destaques-recrutador"><span class="t--pt">Principais</span><span class="t--en">Highlights</span></a></li>
             <li><a href="#competencias"><span class="t--pt">Competências</span><span class="t--en">Skills</span></a></li>
             <li><a href="#experiencia"><span class="t--pt">Experiência</span><span class="t--en">Experience</span></a></li>
             <li><a href="#destaques"><span class="t--pt">Projetos</span><span class="t--en">Projects</span></a></li>
             <li><a href="#formacao"><span class="t--pt">Formação</span><span class="t--en">Education</span></a></li>
-            <li><a href="#contacto"><span class="t--pt">Contacto</span><span class="t--en">Contact</span></a></li>
+            <li><a href="#contacto"><span class="t--pt">Contato</span><span class="t--en">Contact</span></a></li>
           </ul>
           <div class="nav-actions">
-            <div class="lang-switch" role="group" aria-label="Idioma">
-              <button type="button" class="lang-btn lang-btn--active" data-lang="pt" aria-pressed="true">PT</button>
-              <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-            </div>
-            <a href="assets/Tiago-Farias-CV.pdf" class="btn btn--cv btn--sm nav-cv" download="Tiago-O-de-Farias-Curriculo.pdf">
+            <a href="assets/Tiago-Farias-CV.pdf" class="btn btn--nav btn--nav-cv" download="Tiago-O-de-Farias-Curriculo.pdf" title="Baixar currículo PDF">
               <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span class="t--pt">Currículo</span><span class="t--en">Resume</span>
+              <span class="nav-btn-label t--pt">CV</span><span class="nav-btn-label t--en">CV</span>
             </a>
-            <a href="https://wa.me/5551989030405" class="btn btn--whatsapp btn--sm nav-wa" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5551989030405" class="btn btn--nav btn--nav-wa nav-wa" target="_blank" rel="noopener noreferrer" title="WhatsApp">
               <span class="t--pt">WhatsApp</span><span class="t--en">WhatsApp</span>
             </a>
             <button type="button" class="menu-hamburguer" aria-label="Menu" aria-expanded="false">
@@ -78,7 +80,7 @@
       <a href="#experiencia"><span class="t--pt">Experiência</span><span class="t--en">Experience</span></a>
       <a href="#destaques"><span class="t--pt">Projetos</span><span class="t--en">Projects</span></a>
       <a href="#formacao"><span class="t--pt">Formação</span><span class="t--en">Education</span></a>
-      <a href="#contacto"><span class="t--pt">Contacto</span><span class="t--en">Contact</span></a>
+      <a href="#contacto"><span class="t--pt">Contato</span><span class="t--en">Contact</span></a>
       <a href="assets/Tiago-Farias-CV.pdf" class="btn btn--cv" download="Tiago-O-de-Farias-Curriculo.pdf">
         <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         <span class="t--pt">Baixar currículo (PDF)</span><span class="t--en">Download resume (PDF)</span>
@@ -515,9 +517,9 @@
 
     <section class="section contact-section" id="contacto">
       <div class="container contact-inner">
-        <span class="tag tag--accent"><span class="t--pt">Contacto</span><span class="t--en">Contact</span></span>
+        <span class="tag tag--accent"><span class="t--pt">Contato</span><span class="t--en">Contact</span></span>
         <h2 class="section-title"><span class="t--pt">Vamos conversar</span><span class="t--en">Let's talk</span></h2>
-        <p class="contact-text t--pt">Se quiser discutir uma oportunidade ou projeto, entre em contacto.</p>
+        <p class="contact-text t--pt">Se quiser discutir uma oportunidade ou projeto, entre em contato.</p>
         <p class="contact-text t--en">If you'd like to discuss an opportunity or project, feel free to reach out.</p>
         <div class="contact-actions">
           <a href="assets/Tiago-Farias-CV.pdf" class="btn btn--cv btn--lg" download="Tiago-O-de-Farias-Curriculo.pdf">

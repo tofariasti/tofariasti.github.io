@@ -19,31 +19,33 @@
   <header id="header">
     <div class="header-bar-wrap">
       <div class="container nav-floating">
-        <nav class="nav-wrapper" aria-label="Principal">
-          <div class="nav-brand-group">
-            <a href="drone.html" class="logo" aria-label="Tech Drone 360 — início">
-              <img src="img/favicon.svg" alt="" width="32" height="32" class="logo-icon">
-              <span class="logo-text">Tech Drone 360</span>
+        <div class="nav-top">
+          <div class="site-tabs" role="navigation" aria-label="Área do site">
+            <a href="index.html" class="site-tab" title="Portfólio Desenvolvedor de Software">
+              <span class="site-tab__full t--pt">Desenvolvedor de Software</span><span class="site-tab__full t--en">Development</span>
+              <span class="site-tab__short" aria-hidden="true">Dev</span>
             </a>
-            <div class="site-tabs" role="navigation" aria-label="Área do site">
-              <a href="index.html" class="site-tab">
-                <span class="t--pt">Desenvolvimento</span><span class="t--en">Development</span>
-              </a>
-              <a href="drone.html" class="site-tab site-tab--active" aria-current="page">
-                <span class="t--pt">Drone</span><span class="t--en">Drone</span>
-              </a>
-            </div>
+            <a href="drone.html" class="site-tab site-tab--active" aria-current="page" title="Tech Drone 360">
+              <span class="site-tab__full t--pt">Operador de Drone</span><span class="site-tab__full t--en">Operador de Drone</span>
+              <span class="site-tab__short" aria-hidden="true">Operador de Drone</span>
+            </a>
           </div>
+          <div class="lang-switch" role="group" aria-label="Idioma">
+            <button type="button" class="lang-btn lang-btn--active" data-lang="pt" aria-pressed="true">PT</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+        <nav class="nav-wrapper" aria-label="Principal">
+          <a href="drone.html" class="logo logo--drone" aria-label="Tech Drone 360 — início">
+            <img src="img/favicon.svg" alt="" width="36" height="36" class="logo-icon">
+            <span class="logo-text">Tech Drone 360</span>
+          </a>
           <ul class="nav-desktop nav-desktop--compact">
             <li><a href="#portfolio"><span class="t--pt">Portfólio</span><span class="t--en">Portfolio</span></a></li>
-            <li><a href="#contacto"><span class="t--pt">Contacto</span><span class="t--en">Contact</span></a></li>
+            <li><a href="#contacto"><span class="t--pt">Contato</span><span class="t--en">Contact</span></a></li>
           </ul>
           <div class="nav-actions">
-            <div class="lang-switch" role="group" aria-label="Idioma">
-              <button type="button" class="lang-btn lang-btn--active" data-lang="pt" aria-pressed="true">PT</button>
-              <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-            </div>
-            <a href="https://wa.me/5551989030405" class="btn btn--whatsapp btn--sm nav-wa" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://wa.me/5551989030405" class="btn btn--nav btn--nav-wa nav-wa" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             <button type="button" class="menu-hamburguer" aria-label="Menu" aria-expanded="false">
               <span></span><span></span><span></span>
             </button>
@@ -73,7 +75,7 @@
           <span class="tag tag--accent">Tech Drone 360</span>
           <h1><span class="t--pt">Imagens e vídeos aéreos com drone</span><span class="t--en">Aerial drone photo &amp; video</span></h1>
           <p class="hero-subtitle"><span class="t--pt">Tiago O. de Farias · Porto Alegre, RS</span><span class="t--en">Tiago O. de Farias · Porto Alegre, Brazil</span></p>
-          <p class="hero-desc t--pt">Captação de imagens e vídeos aéreos com drone — paisagens, eventos, imóveis e material para redes sociais, com planejamento de voo, estabilização e pós-produção.</p>
+          <p class="hero-desc t--pt">Atuo também com captação de imagens e vídeos aéreos com drone — paisagens, eventos, imóveis e material para redes sociais, com planejamento de voo, estabilização e pós-produção.</p>
           <p class="hero-desc t--en">Aerial photo and video with drones — landscapes, events, real estate and social content, including flight planning, stabilization and post-production.</p>
           <div class="hero-cta">
             <a href="https://www.youtube.com/@techdrone360" class="btn btn--cv btn--lg" target="_blank" rel="noopener noreferrer">
