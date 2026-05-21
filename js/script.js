@@ -1,5 +1,30 @@
 const LANG_KEY = 'tofariasti_lang_v1';
 const COOKIE_KEY = 'tofariasti_cookie_policy_v1';
+const WA_PHONE = '5551989030405';
+
+const WA_MESSAGES = {
+  dev: {
+    pt: 'Olá Tiago, vi seu portfólio de Desenvolvedor de Software e gostaria de conversar sobre uma oportunidade ou projeto.',
+    en: 'Hi Tiago, I saw your Software Developer portfolio and would like to discuss an opportunity or project.',
+  },
+  drone: {
+    pt: 'Olá Tiago, vi o Tech Drone 360 e gostaria de um orçamento para captação aérea com drone.',
+    en: 'Hi Tiago, I saw Tech Drone 360 and would like a quote for aerial drone photo and video.',
+  },
+};
+
+function getWhatsAppContext() {
+  return document.body.classList.contains('page-drone') ? 'drone' : 'dev';
+}
+
+function updateWhatsAppLinks() {
+  const lang = document.body.classList.contains('lang-en') ? 'en' : 'pt';
+  const text = WA_MESSAGES[getWhatsAppContext()][lang];
+  const href = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`;
+  document.querySelectorAll('a.wa-link').forEach((a) => {
+    a.href = href;
+  });
+}
 
 function setLang(lang) {
   const next = lang === 'en' ? 'en' : 'pt';
@@ -16,6 +41,7 @@ function setLang(lang) {
   } catch (e) {
     /* private mode */
   }
+  updateWhatsAppLinks();
 }
 
 (function initLang() {
@@ -27,6 +53,8 @@ function setLang(lang) {
   }
   if (stored === 'en' || stored === 'pt') {
     setLang(stored);
+  } else {
+    updateWhatsAppLinks();
   }
 })();
 
