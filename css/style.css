@@ -170,15 +170,6 @@ header.scrolled .nav-floating {
   transition: color 0.2s, background 0.2s, box-shadow 0.2s;
 }
 
-.site-tab__short {
-  display: none;
-}
-
-body.lang-pt .site-tab__short.t--en,
-body.lang-en .site-tab__short.t--pt {
-  display: none !important;
-}
-
 .site-tab:hover {
   color: var(--text);
 }
@@ -1212,31 +1203,21 @@ body.cookie-modal-open {
 }
 
 /* Responsive */
-@media (max-width: 720px) {
-  .site-tab__full {
-    display: none !important;
-  }
-
-  .site-tab__short.t--pt,
-  .site-tab__short.t--en {
-    display: inline !important;
-  }
-
-  body.lang-pt .site-tab__short.t--en,
-  body.lang-en .site-tab__short.t--pt {
-    display: none !important;
+@media (max-width: 640px) {
+  .site-tabs {
+    max-width: calc(100vw - 7.5rem);
   }
 
   .site-tab {
-    font-size: 0.68rem;
-    padding: 0.35rem 0.55rem;
+    font-size: 0.62rem;
+    padding: 0.32rem 0.5rem;
   }
 }
 
-@media (min-width: 721px) and (max-width: 960px) {
+@media (min-width: 641px) and (max-width: 960px) {
   .site-tab {
-    font-size: 0.7rem;
-    padding: 0.38rem 0.65rem;
+    font-size: 0.68rem;
+    padding: 0.36rem 0.6rem;
   }
 }
 
