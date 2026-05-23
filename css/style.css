@@ -1012,10 +1012,6 @@ body.lang-pt .timeline-en {
   border-color: rgba(225, 48, 108, 0.45);
 }
 
-.drone-site-cta-inline {
-  margin-bottom: 1.25rem;
-}
-
 .drone-card__body {
   display: flex;
   flex-direction: column;
