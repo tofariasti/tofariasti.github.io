@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body class="lang-pt page-drone" id="top">
   <header id="header">
@@ -41,7 +41,7 @@
             <span class="logo-text">Tech Drone 360</span>
           </a>
           <ul class="nav-desktop nav-desktop--compact">
-            <li><a href="#site-comercial"><span class="t--pt">Site</span><span class="t--en">Website</span></a></li>
+            <li><a href="https://techdrone360.com.br/" class="nav-link--highlight" target="_blank" rel="noopener noreferrer"><span class="t--pt">Site oficial</span><span class="t--en">Official site</span></a></li>
             <li><a href="#portfolio"><span class="t--pt">Portfólio</span><span class="t--en">Portfolio</span></a></li>
             <li><a href="#contacto"><span class="t--pt">Contato</span><span class="t--en">Contact</span></a></li>
           </ul>
@@ -63,7 +63,7 @@
           <span class="t--pt">Operador de Drone</span><span class="t--en">Drone Operator</span>
         </a>
       </div>
-      <a href="#site-comercial"><span class="t--pt">Site TechDrone360</span><span class="t--en">TechDrone360 site</span></a>
+      <a href="https://techdrone360.com.br/" class="nav-mobile-site" target="_blank" rel="noopener noreferrer"><span class="t--pt">Visitar techdrone360.com.br</span><span class="t--en">Visit techdrone360.com.br</span></a>
       <a href="#portfolio"><span class="t--pt">Portfólio</span><span class="t--en">Portfolio</span></a>
       <a href="#contacto"><span class="t--pt">Contato</span><span class="t--en">Contact</span></a>
       <a href="https://wa.me/5551989030405" class="btn btn--whatsapp wa-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -79,18 +79,27 @@
           <p class="hero-subtitle"><span class="t--pt">Tiago O. de Farias · Porto Alegre, RS</span><span class="t--en">Tiago O. de Farias · Porto Alegre, Brazil</span></p>
           <p class="hero-desc t--pt">Atuo também com captação de imagens e vídeos aéreos com drone — paisagens, eventos, imóveis e material para redes sociais, com planejamento de voo, estabilização e pós-produção.</p>
           <p class="hero-desc t--en">Aerial photo and video with drones — landscapes, events, real estate and social content, including flight planning, stabilization and post-production.</p>
-          <div class="hero-cta">
-            <a href="https://techdrone360.com.br/" class="btn btn--cv btn--lg" target="_blank" rel="noopener noreferrer">
-              <span class="t--pt">Site TechDrone360</span><span class="t--en">TechDrone360 website</span>
+          <a href="https://techdrone360.com.br/" class="drone-site-hero-banner" target="_blank" rel="noopener noreferrer">
+            <span class="drone-site-hero-banner__badge"><span class="t--pt">Site oficial</span><span class="t--en">Official site</span></span>
+            <span class="drone-site-hero-banner__content">
+              <strong class="drone-site-hero-banner__title"><span class="t--pt">Conheça o TechDrone360 completo</span><span class="t--en">Explore the full TechDrone360 site</span></strong>
+              <span class="drone-site-hero-banner__desc t--pt">Portfólio, serviços, vídeos, equipamento, FAQ e orçamento — Porto Alegre e região. Veja o trabalho antes de contratar.</span>
+              <span class="drone-site-hero-banner__desc t--en">Portfolio, services, videos, gear, FAQ and quotes — Porto Alegre and region. See the work before you hire.</span>
+            </span>
+            <span class="drone-site-hero-banner__action">
+              <span class="t--pt">Visitar techdrone360.com.br</span><span class="t--en">Visit techdrone360.com.br</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+          <div class="hero-cta hero-cta--secondary">
+            <a href="https://www.youtube.com/@techdrone360" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+              <span class="t--pt">YouTube</span><span class="t--en">YouTube</span>
             </a>
-            <a href="https://www.youtube.com/@techdrone360" class="btn btn--outline btn--lg" target="_blank" rel="noopener noreferrer">
-              <span class="t--pt">Ver no YouTube</span><span class="t--en">Watch on YouTube</span>
-            </a>
-            <a href="https://www.instagram.com/techdrone360" class="btn btn--outline btn--lg" target="_blank" rel="noopener noreferrer">
-              <span class="t--pt">Ver no Instagram</span><span class="t--en">View on Instagram</span>
+            <a href="https://www.instagram.com/techdrone360" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+              <span class="t--pt">Instagram</span><span class="t--en">Instagram</span>
             </a>
             <a href="https://wa.me/5551989030405" class="btn btn--whatsapp wa-link" target="_blank" rel="noopener noreferrer">
-              <span class="t--pt">Falar no WhatsApp</span><span class="t--en">Chat on WhatsApp</span>
+              <span class="t--pt">WhatsApp</span><span class="t--en">WhatsApp</span>
             </a>
           </div>
           <ul class="hero-stats" aria-label="Serviços">
@@ -106,16 +115,18 @@
         </div>
         <div class="hero-visual hero-visual--drone">
           <div class="drone-portfolio drone-portfolio--hero">
-            <a href="https://techdrone360.com.br/" class="drone-card drone-card--site" target="_blank" rel="noopener noreferrer">
+            <a href="https://techdrone360.com.br/" class="drone-card drone-card--site drone-card--featured" target="_blank" rel="noopener noreferrer">
+              <span class="drone-card__ribbon"><span class="t--pt">Comece por aqui</span><span class="t--en">Start here</span></span>
               <span class="drone-card__icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </span>
               <span class="drone-card__body">
                 <strong>TechDrone360</strong>
                 <span class="drone-card__handle">techdrone360.com.br</span>
-                <span class="t--pt drone-card__cta">Serviços, portfólio e orçamento</span>
-                <span class="t--en drone-card__cta">Services, portfolio and quotes</span>
+                <span class="t--pt drone-card__cta">Clique e solicite orçamento com NF</span>
+                <span class="t--en drone-card__cta">Click to request a quote with invoice</span>
               </span>
+              <span class="drone-card__arrow" aria-hidden="true">→</span>
             </a>
             <a href="https://www.youtube.com/@techdrone360" class="drone-card drone-card--youtube" target="_blank" rel="noopener noreferrer">
               <span class="drone-card__icon" aria-hidden="true">

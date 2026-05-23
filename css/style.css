@@ -257,6 +257,21 @@ header.scrolled .nav-floating {
   gap: 0.25rem;
 }
 
+.nav-link--highlight {
+  color: var(--accent) !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  font-weight: 600;
+}
+
+.nav-responsive .nav-mobile-site {
+  color: var(--accent);
+  font-weight: 600;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.1);
+  text-align: center;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -507,6 +522,88 @@ header.scrolled .nav-floating {
   flex-wrap: wrap;
   gap: 0.65rem;
   margin-bottom: 2rem;
+}
+
+.hero-cta--secondary {
+  margin-bottom: 1.75rem;
+}
+
+.hero-cta--secondary .btn {
+  font-size: 0.85rem;
+  padding: 0.55rem 0.95rem;
+}
+
+.page-drone .drone-site-hero-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(34, 211, 238, 0.08)),
+    var(--bg-card);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.12), 0 12px 40px rgba(56, 189, 248, 0.12);
+  color: var(--text);
+  transition: transform 0.2s, box-shadow 0.25s, border-color 0.2s;
+}
+
+.page-drone .drone-site-hero-banner:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.65);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.2), 0 16px 48px rgba(56, 189, 248, 0.22);
+  color: var(--text);
+}
+
+.drone-site-hero-banner__badge {
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.25);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.drone-site-hero-banner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.drone-site-hero-banner__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.drone-site-hero-banner__desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.drone-site-hero-banner__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0f1419;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
+}
+
+.page-drone .drone-site-hero-banner:hover .drone-site-hero-banner__action {
+  box-shadow: 0 6px 28px rgba(56, 189, 248, 0.45);
 }
 
 .hero-stats {
@@ -1002,14 +1099,52 @@ body.lang-pt .timeline-en {
   background: linear-gradient(135deg, rgba(21, 27, 35, 0.95), rgba(56, 189, 248, 0.08));
 }
 
+.drone-card--featured {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 1.35rem;
+  border-width: 2px;
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.15);
+}
+
+.drone-card__ribbon {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #0f1419;
+}
+
+.drone-card__arrow {
+  margin-left: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
 .drone-card--site .drone-card__icon {
   background: rgba(56, 189, 248, 0.2);
   color: var(--accent);
+  width: 56px;
+  height: 56px;
 }
 
-.drone-card--site:hover {
-  border-color: rgba(56, 189, 248, 0.55);
-  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.15);
+.drone-card--site:hover,
+.drone-card--featured:hover {
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.25);
+}
+
+.drone-card--featured .drone-card__body strong {
+  font-size: 1.2rem;
 }
 
 .drone-site-cta-inline {
@@ -1021,9 +1156,10 @@ body.lang-pt .timeline-en {
   gap: 1.5rem;
   padding: 2rem 1.5rem;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  background: radial-gradient(ellipse 80% 60% at 20% 0%, rgba(56, 189, 248, 0.12), transparent),
+  border: 2px solid rgba(56, 189, 248, 0.4);
+  background: radial-gradient(ellipse 80% 60% at 20% 0%, rgba(56, 189, 248, 0.18), transparent),
     var(--bg-card);
+  box-shadow: 0 12px 48px rgba(56, 189, 248, 0.1);
 }
 
 .drone-site-cta__content .section-title {
@@ -1435,6 +1571,19 @@ body.cookie-modal-open {
 
   .hero-cta .btn {
     width: 100%;
+  }
+
+  .page-drone .drone-site-hero-banner {
+    padding: 1.1rem 1.15rem;
+  }
+
+  .drone-site-hero-banner__title {
+    font-size: 1.05rem;
+  }
+
+  .drone-site-hero-banner__action {
+    font-size: 0.92rem;
+    padding: 0.75rem 1rem;
   }
 
   .hero-stats {
