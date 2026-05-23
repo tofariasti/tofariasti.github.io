@@ -1012,6 +1012,26 @@ body.lang-pt .timeline-en {
   border-color: rgba(225, 48, 108, 0.45);
 }
 
+.drone-card--site {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: linear-gradient(135deg, rgba(21, 27, 35, 0.98), rgba(56, 189, 248, 0.1));
+}
+
+.drone-card--site .drone-card__icon {
+  background: rgba(56, 189, 248, 0.22);
+  color: var(--accent);
+}
+
+.drone-card--site:hover {
+  border-color: rgba(56, 189, 248, 0.65);
+  box-shadow: 0 12px 36px rgba(56, 189, 248, 0.18);
+}
+
+.drone-card--site .drone-card__cta {
+  color: var(--accent-2);
+  font-weight: 500;
+}
+
 .drone-card__body {
   display: flex;
   flex-direction: column;
