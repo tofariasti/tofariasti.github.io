@@ -1012,59 +1012,6 @@ body.lang-pt .timeline-en {
   border-color: rgba(225, 48, 108, 0.45);
 }
 
-.drone-card--site {
-  border-color: rgba(56, 189, 248, 0.35);
-  background: linear-gradient(135deg, rgba(21, 27, 35, 0.95), rgba(56, 189, 248, 0.08));
-}
-
-.drone-card--featured {
-  position: relative;
-  padding: 1.5rem 1.5rem 1.5rem 1.35rem;
-  border-width: 2px;
-  border-color: rgba(56, 189, 248, 0.5);
-  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.15);
-}
-
-.drone-card__ribbon {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
-  background: var(--accent);
-  color: #0f1419;
-}
-
-.drone-card__arrow {
-  margin-left: auto;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.drone-card--site .drone-card__icon {
-  background: rgba(56, 189, 248, 0.2);
-  color: var(--accent);
-  width: 56px;
-  height: 56px;
-}
-
-.drone-card--site:hover,
-.drone-card--featured:hover {
-  border-color: rgba(56, 189, 248, 0.7);
-  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.25);
-}
-
-.drone-card--featured .drone-card__body strong {
-  font-size: 1.2rem;
-}
-
 .drone-site-cta-inline {
   margin-bottom: 1.25rem;
 }
