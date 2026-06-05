@@ -1,813 +1,1215 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tiago O. de Farias - Desenvolvedor Backend Sênior</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiago O. de Farias - Desenvolvedor Backend Sênior</title>
 
-    <style>
-        :root {
-            --bg: #f4f6f8;
-            --paper: #ffffff;
-            --primary: #111827;
-            --secondary: #374151;
-            --muted: #6b7280;
-            --border: #e5e7eb;
-            --accent: #1d4ed8;
-            --accent-soft: #eff6ff;
-            --success: #047857;
-            --success-soft: #ecfdf5;
-        }
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --paper: #ffffff;
+      --primary: #111827;
+      --secondary: #374151;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #1d4ed8;
+      --success: #047857;
+      --success-soft: #ecfdf5;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            background: var(--bg);
-            color: var(--secondary);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            line-height: 1.6;
-        }
+    body {
+      background: var(--bg);
+      color: var(--secondary);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        .page {
-            max-width: 980px;
-            margin: 32px auto;
-            background: var(--paper);
-            border-radius: 14px;
-            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
-            overflow: hidden;
-        }
+    .page {
+      max-width: 980px;
+      margin: 32px auto;
+      background: var(--paper);
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+      overflow: hidden;
+    }
 
-        header {
-            padding: 38px 48px 30px;
-            border-bottom: 1px solid var(--border);
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #ffffff;
-        }
+    header {
+      padding: 38px 48px 30px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #ffffff;
+    }
 
-        h1 {
-            font-size: 34px;
-            line-height: 1.1;
-            letter-spacing: -0.7px;
-            margin-bottom: 8px;
-        }
+    h1 {
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: -0.7px;
+      margin-bottom: 8px;
+    }
 
-        .headline {
-            font-size: 17px;
-            color: #dbeafe;
-            font-weight: 500;
-            max-width: 820px;
-        }
+    .headline {
+      font-size: 17px;
+      color: #dbeafe;
+      font-weight: 500;
+      max-width: 860px;
+    }
 
-        .headline strong {
-            color: #ffffff;
-        }
+    .headline strong {
+      color: #ffffff;
+    }
 
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 18px;
-            margin-top: 20px;
-            font-size: 13px;
-            color: #e5e7eb;
-        }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #e5e7eb;
+    }
 
-        .contact a {
-            color: #e5e7eb;
-        }
+    .contact a {
+      color: #e5e7eb;
+    }
 
-        main {
-            padding: 36px 48px 44px;
-        }
+    main {
+      padding: 36px 48px 44px;
+    }
 
-        section {
-            margin-bottom: 32px;
-        }
+    section {
+      margin-bottom: 32px;
+    }
 
-        section:last-child {
-            margin-bottom: 0;
-        }
+    section:last-child {
+      margin-bottom: 0;
+    }
 
-        h2 {
-            color: var(--primary);
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.9px;
-            margin-bottom: 14px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-            position: relative;
-        }
+    h2 {
+      color: var(--primary);
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
 
-        h2::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-            width: 56px;
-            height: 2px;
-            background: var(--accent);
-        }
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 56px;
+      height: 2px;
+      background: var(--accent);
+    }
 
-        h3 {
-            color: var(--primary);
-            font-size: 16px;
-            margin-bottom: 4px;
-        }
+    p {
+      margin-bottom: 10px;
+    }
 
-        p {
-            margin-bottom: 10px;
-        }
+    ul {
+      margin-left: 18px;
+    }
 
-        ul {
-            margin-left: 18px;
-        }
+    li {
+      margin-bottom: 6px;
+    }
 
-        li {
-            margin-bottom: 6px;
-        }
+    li::marker {
+      color: var(--accent);
+    }
 
-        li::marker {
-            color: var(--accent);
-        }
+    .summary {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
 
-        .summary {
-            background: #f9fafb;
-            border: 1px solid var(--border);
-            border-left: 4px solid var(--accent);
-            border-radius: 12px;
-            padding: 18px 20px;
-        }
+    .summary strong {
+      color: var(--primary);
+    }
 
-        .summary strong {
-            color: var(--primary);
-        }
+    .recruiter-note {
+      margin-top: 12px;
+      background: var(--success-soft);
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid var(--success);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: #065f46;
+      font-weight: 600;
+    }
 
-        .recruiter-note {
-            margin-top: 12px;
-            background: var(--success-soft);
-            border: 1px solid #bbf7d0;
-            border-left: 4px solid var(--success);
-            border-radius: 10px;
-            padding: 12px 14px;
-            color: #065f46;
-            font-weight: 600;
-        }
+    .experience-item {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
 
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-        }
+    .experience-item:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
 
-        .highlight {
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 12px 14px;
-            background: #ffffff;
-        }
+    .experience-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 10px;
+    }
 
-        .highlight strong {
-            color: var(--primary);
-        }
+    .role {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--primary);
+    }
 
-        .highlight.featured {
-            background: var(--success-soft);
-            border-color: #bbf7d0;
-            border-left: 4px solid var(--success);
-        }
+    .company {
+      color: var(--secondary);
+      font-weight: 600;
+      margin-top: 2px;
+    }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-        }
+    .period {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
 
-        .skill-card {
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 13px 14px;
-            background: #ffffff;
-        }
+    .context {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
 
-        .skill-card h3 {
-            font-size: 14px;
-            margin-bottom: 6px;
-        }
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 12px;
+    }
 
-        .skill-card p {
-            margin-bottom: 0;
-            color: var(--secondary);
-        }
+    .tag {
+      display: inline-flex;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: var(--accent);
+      padding: 4px 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
 
-        .experience-item {
-            padding-bottom: 24px;
-            margin-bottom: 24px;
-            border-bottom: 1px solid var(--border);
-        }
+    .tag.success {
+      background: var(--success-soft);
+      color: var(--success);
+      border: 1px solid #bbf7d0;
+    }
 
-        .experience-item:last-child {
-            padding-bottom: 0;
-            margin-bottom: 0;
-            border-bottom: none;
-        }
+    .education-grid,
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 24px;
+    }
 
-        .experience-header {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 20px;
-            align-items: start;
-            margin-bottom: 10px;
-        }
+    .education-item strong,
+    .cert-item strong {
+      color: var(--primary);
+    }
 
-        .role {
-            font-size: 17px;
-            font-weight: 800;
-            color: var(--primary);
-        }
+    .muted {
+      color: var(--muted);
+    }
 
-        .company {
-            color: var(--secondary);
-            font-weight: 600;
-            margin-top: 2px;
-        }
+    footer {
+      padding: 16px 48px;
+      border-top: 1px solid var(--border);
+      background: #f9fafb;
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+    }
 
-        .period {
-            color: var(--muted);
-            font-size: 13px;
-            font-weight: 700;
-            white-space: nowrap;
-            padding-top: 2px;
-        }
+    @media (max-width: 760px) {
+      .page {
+        margin: 0;
+        border-radius: 0;
+      }
 
-        .context {
-            color: var(--muted);
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
+      header,
+      main,
+      footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
 
-        .stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin: 10px 0 12px;
-        }
+      h1 {
+        font-size: 29px;
+      }
 
-        .tag {
-            display: inline-flex;
-            border-radius: 999px;
-            background: var(--accent-soft);
-            color: var(--accent);
-            padding: 4px 8px;
-            font-size: 11.5px;
-            font-weight: 700;
-        }
+      .headline {
+        font-size: 15.5px;
+      }
 
-        .tag.success {
-            background: var(--success-soft);
-            color: var(--success);
-            border: 1px solid #bbf7d0;
-        }
+      .experience-header,
+      .education-grid,
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
 
-        .education-grid,
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px 24px;
-        }
+      .period {
+        white-space: normal;
+      }
+    }
 
-        .education-item,
-        .cert-item {
-            margin-bottom: 4px;
-        }
+    @media print {
+      body {
+        background: #ffffff;
+        font-size: 12px;
+        line-height: 1.45;
+      }
 
-        .education-item strong,
-        .cert-item strong {
-            color: var(--primary);
-        }
+      .page {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
 
-        .muted {
-            color: var(--muted);
-        }
+      header {
+        padding: 26px 34px 22px;
+        background: #111827 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
 
-        footer {
-            padding: 16px 48px;
-            border-top: 1px solid var(--border);
-            background: #f9fafb;
-            color: var(--muted);
-            text-align: center;
-            font-size: 12px;
-        }
+      main {
+        padding: 26px 34px 28px;
+      }
 
-        @media (max-width: 760px) {
-            .page {
-                margin: 0;
-                border-radius: 0;
-            }
+      footer {
+        display: none;
+      }
 
-            header,
-            main,
-            footer {
-                padding-left: 24px;
-                padding-right: 24px;
-            }
+      section {
+        margin-bottom: 22px;
+      }
 
-            h1 {
-                font-size: 29px;
-            }
+      .experience-item,
+      .summary,
+      .education-item,
+      .cert-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
 
-            .headline {
-                font-size: 15.5px;
-            }
-
-            .highlights,
-            .skills-grid,
-            .education-grid,
-            .cert-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-header {
-                grid-template-columns: 1fr;
-                gap: 4px;
-            }
-
-            .period {
-                white-space: normal;
-            }
-        }
-
-        @media print {
-            body {
-                background: #ffffff;
-                font-size: 12px;
-                line-height: 1.45;
-            }
-
-            .page {
-                max-width: 100%;
-                margin: 0;
-                box-shadow: none;
-                border-radius: 0;
-            }
-
-            header {
-                padding: 26px 34px 22px;
-                background: #111827 !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            main {
-                padding: 26px 34px 28px;
-            }
-
-            footer {
-                display: none;
-            }
-
-            section {
-                margin-bottom: 22px;
-            }
-
-            .experience-item,
-            .summary,
-            .highlight,
-            .skill-card,
-            .education-item,
-            .cert-item {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
-        }
-    </style>
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="page">
-        <header>
-            <h1>Tiago O. de Farias</h1>
+  <div class="page">
+    <header>
+      <h1>Tiago O. de Farias</h1>
 
-            <div class="headline">
-                Desenvolvedor Backend Sênior | PHP, Laravel, APIs REST, <strong>Offline First</strong>, Salesforce CRM, MySQL e integrações corporativas
+      <div class="headline">
+        Desenvolvedor Backend Sênior | PHP, Laravel, Python/Django, APIs REST,
+        <strong>Offline First</strong>, DDD, Clean Code, SOLID, filas, AWS,
+        Salesforce CRM, MySQL e integrações corporativas
+      </div>
+
+      <div class="contact">
+        <span>Porto Alegre/RS</span>
+        <span>Telefone: 51 9 8903-0405</span>
+        <span>
+          E-mail:
+          <a href="mailto:tiago.farias.poa@gmail.com">tiago.farias.poa@gmail.com</a>
+        </span>
+        <span>
+          LinkedIn:
+          <a href="https://linkedin.com/in/tiago-farias1985" target="_blank">linkedin.com/in/tiago-farias1985</a>
+        </span>
+        <span>
+          GitHub:
+          <a href="https://github.com/tofarias" target="_blank">github.com/tofarias</a> /
+          <a href="https://github.com/tofariasti" target="_blank">github.com/tofariasti</a>
+        </span>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Resumo Profissional</h2>
+
+        <div class="summary">
+          <p>
+            Desenvolvedor Backend Sênior com mais de 10 anos de experiência em PHP e Laravel,
+            especializado na construção e evolução de APIs REST, integrações entre sistemas e aplicações
+            corporativas de missão crítica.
+          </p>
+
+          <p>
+            Experiência com arquitetura orientada a domínio, modelagem de dados, filas, workers,
+            processamento assíncrono e mensageria utilizando <strong>Redis com Laravel Horizon</strong>,
+            <strong>AWS SQS</strong> e <strong>RabbitMQ</strong>, aplicando a tecnologia mais adequada
+            ao contexto técnico, operacional e de infraestrutura de cada projeto.
+          </p>
+
+          <p>
+            Forte atuação com boas práticas de engenharia de software, incluindo <strong>Clean Code</strong>,
+            <strong>DDD</strong>, <strong>SOLID</strong>, <strong>YAGNI</strong>, padronização com
+            <strong>PSRs</strong>, separação de responsabilidades, baixo acoplamento, alta coesão,
+            legibilidade, manutenibilidade e evolução sustentável de código.
+          </p>
+
+          <p>
+            Vivência com autenticação corporativa SSO/SAML2, Microsoft Azure AD, Laravel Sanctum,
+            observabilidade, testes automatizados, sustentação de sistemas legados, integrações com
+            Salesforce CRM, APIs externas, AWS, MySQL, MongoDB e Oracle.
+          </p>
+
+          <div class="recruiter-note">
+            Experiência recente em projeto mobile 100% Offline First, com backend Laravel preparado para
+            sincronização de dados, operação em campo, áreas remotas e conectividade limitada.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experiência Profissional</h2>
+
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor Backend Sênior</div>
+              <div class="company">AP Digital Services · Alocação em Yara Brasil</div>
+              <div class="context">Fertilizantes, nutrição para plantas e consultoria agrícola</div>
             </div>
+            <div class="period">04/2024 – atual</div>
+          </div>
 
-            <div class="contact">
-                <span>Porto Alegre/RS</span>
-                <span>Telefone: 51 9 8903-0405</span>
-                <span>E-mail: <a href="mailto:tiago.farias.poa@gmail.com">tiago.farias.poa@gmail.com</a></span>
-                <span>LinkedIn: <a href="https://linkedin.com/in/tiago-farias1985" target="_blank">linkedin.com/in/tiago-farias1985</a></span>
-                <span>GitHub: <a href="https://github.com/tofarias" target="_blank">github.com/tofarias</a> / <a href="https://github.com/tofariasti" target="_blank">github.com/tofariasti</a></span>
+          <div class="stack">
+            <span class="tag success">Projeto Mobile 100% Offline First</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">DDD</span>
+            <span class="tag">Clean Code</span>
+            <span class="tag">SOLID</span>
+            <span class="tag">PSRs</span>
+            <span class="tag">Flutter Mobile</span>
+            <span class="tag">Salesforce CRM</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Laravel Horizon</span>
+            <span class="tag">Laravel Pulse</span>
+            <span class="tag">SSO</span>
+            <span class="tag">SAML2</span>
+            <span class="tag">Microsoft Azure AD</span>
+            <span class="tag">Sanctum</span>
+            <span class="tag">Testes E2E</span>
+          </div>
+
+          <ul>
+            <li>
+              Atuação em sistema crítico de consultoria agrícola, com construção e evolução de API REST
+              versionada em Laravel para aplicação mobile em Flutter.
+            </li>
+
+            <li>
+              Desenvolvimento de backend preparado para projeto mobile <strong>100% Offline First</strong>,
+              suportando sincronização posterior de dados, operação em campo, consistência das informações
+              e continuidade em áreas remotas.
+            </li>
+
+            <li>
+              Aplicação de arquitetura orientada a domínio <strong>DDD</strong>, práticas de
+              <strong>Clean Code</strong>, princípios <strong>SOLID</strong>, <strong>YAGNI</strong>
+              e padronização <strong>PSRs</strong>, com foco em baixo acoplamento, alta coesão,
+              legibilidade e manutenibilidade.
+            </li>
+
+            <li>
+              Planejamento técnico da migração de <strong>Laravel 10 para Laravel 12</strong>, avaliando
+              impactos em bootstrap, middleware, providers, exceptions, dependências e compatibilidade de pacotes.
+            </li>
+
+            <li>
+              Desenvolvimento de integrações backend entre sistemas internos, <strong>Salesforce CRM</strong>
+              e APIs externas, incluindo cotação do dólar, dados climáticos e Atfarm API.
+            </li>
+
+            <li>
+              Implementação de mais de 11 pipelines de importação assíncrona integrados ao
+              <strong>Salesforce CRM</strong>, utilizando OAuth2 JWT, SOQL, jobs Laravel, filas,
+              workers e processamento em background para sincronização de dados corporativos.
+            </li>
+
+            <li>
+              Utilização de <strong>Redis</strong> como backend de filas e cache da aplicação, em conjunto com
+              <strong>Laravel Horizon</strong> para monitoramento dos jobs, filas, workers, throughput, tentativas,
+              falhas, tempo de processamento e reprocessamento.
+            </li>
+
+            <li>
+              Adoção de <strong>Redis com Laravel Horizon em vez de RabbitMQ</strong> por alinhamento com a stack
+              nativa do Laravel, menor complexidade operacional e melhor aproveitamento da infraestrutura já existente
+              no projeto.
+            </li>
+
+            <li>
+              A decisão permitiu centralizar o processamento assíncrono dentro do ecossistema Laravel, utilizando jobs,
+              queues, workers e Horizon sem a necessidade de manter um broker de mensageria separado, como o RabbitMQ.
+            </li>
+
+            <li>
+              Como os pipelines de importação do Salesforce e demais rotinas assíncronas não exigiam recursos avançados
+              de roteamento de mensagens, como exchanges complexas, routing keys ou padrões mais sofisticados de mensageria,
+              o Redis com Horizon atendeu bem ao cenário de filas da aplicação.
+            </li>
+
+            <li>
+              O uso de Redis/Horizon também facilitou a observabilidade operacional, permitindo acompanhar falhas,
+              retries, volume de processamento e saúde dos workers diretamente pelo Horizon, reduzindo esforço de
+              configuração, operação e manutenção de infraestrutura adicional.
+            </li>
+
+            <li>
+              Configuração de stack de observabilidade com Telescope, Laravel Pulse, Horizon, Spatie Health,
+              Log Viewer e alertas automáticos no Microsoft Teams para falhas críticas, exceptions e erros HTTP 5xx.
+            </li>
+
+            <li>
+              Implementação de autenticação corporativa com <strong>SSO via SAML2</strong> contra
+              <strong>Microsoft Azure AD</strong>, utilizando o pacote Laravel
+              <strong>aacotroneo/laravel-saml2</strong>.
+            </li>
+
+            <li>
+              Configuração do fluxo SAML entre a aplicação Laravel e o Microsoft Azure AD, incluindo
+              Service Provider, metadata, Entity ID, ACS URL, certificados, atributos de usuário,
+              callback de autenticação e tratamento do retorno SAML.
+            </li>
+
+            <li>
+              Integração do SSO com a base de usuários da aplicação, combinando autenticação corporativa,
+              controle de acesso interno, sessões autenticadas e cenários de autenticação dupla com
+              <strong>Laravel Sanctum</strong>.
+            </li>
+
+            <li>
+              Desenvolvimento de painel administrativo com Filament v3 e Livewire para gestão de clientes,
+              contatos, atividades, campanhas e precificação.
+            </li>
+
+            <li>
+              Aplicação de testes automatizados, incluindo testes E2E, além de práticas de qualidade com
+              Larastan, PHPStan, Pest, Pint, PHP Insights e CaptainHook.
+            </li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor Backend Freelancer</div>
+              <div class="company">
+                Corrige Aí ·
+                <a href="https://corrigeai.com/" target="_blank">corrigeai.com</a>
+              </div>
+              <div class="context">
+                Projeto freelance paralelo realizado em horário oposto às atividades principais, com reconstrução
+                arquitetural de API REST em Laravel 10, DDD, Laravel Filament, filas assíncronas com AWS SQS,
+                workers Laravel, AWS e frontend React
+              </div>
             </div>
-        </header>
+            <div class="period">04/2025 – 06/2025</div>
+          </div>
 
-        <main>
-            <section>
-                <h2>Resumo Profissional</h2>
+          <div class="stack">
+            <span class="tag success">Projeto freelance paralelo</span>
+            <span class="tag">Laravel 10</span>
+            <span class="tag">API REST</span>
+            <span class="tag">DDD</span>
+            <span class="tag">Clean Code</span>
+            <span class="tag">SOLID</span>
+            <span class="tag">YAGNI</span>
+            <span class="tag">PSRs</span>
+            <span class="tag">Laravel Filament</span>
+            <span class="tag">Queues</span>
+            <span class="tag">Workers</span>
+            <span class="tag">AWS SQS</span>
+            <span class="tag">AWS</span>
+            <span class="tag">React</span>
+          </div>
 
-                <div class="summary">
-                    <p>
-                        Desenvolvedor Backend Sênior com mais de 10 anos de experiência em PHP e Laravel, especializado na construção e evolução de APIs REST, integrações entre sistemas e aplicações corporativas de missão crítica.
-                    </p>
+          <ul>
+            <li>
+              Atuação em projeto freelance de reconstrução da API REST da plataforma Corrige Aí,
+              participando desde a revisão da arquitetura até a reorganização das camadas da aplicação.
+            </li>
 
-                    <p>
-                        Experiência com arquitetura orientada a domínio, modelagem de dados, filas, autenticação, observabilidade, testes automatizados e sustentação de sistemas legados. Atuação em projetos dos segmentos de agronegócio, saúde, governo, meios de pagamento, logística e sistemas corporativos.
-                    </p>
+            <li>
+              Reconstrução do backend utilizando <strong>Laravel 10</strong>, estruturando a aplicação
+              com menor acoplamento entre controllers, regras de negócio, persistência e integrações externas.
+            </li>
 
-                    <div class="recruiter-note">
-                        Experiência recente em projeto mobile 100% Offline First, com backend Laravel preparado para sincronização de dados, operação em campo, áreas remotas e conectividade limitada.
-                    </div>
-                </div>
-            </section>
+            <li>
+              Aplicação de conceitos de <strong>Domain-Driven Design</strong>, <strong>Clean Code</strong>,
+              <strong>SOLID</strong>, <strong>YAGNI</strong> e <strong>PSRs</strong>, separando responsabilidades
+              entre domínio, aplicação, infraestrutura e interface HTTP.
+            </li>
 
-            <section>
-                <h2>Destaques para Recrutadores</h2>
+            <li>
+              Estruturação da <strong>API REST</strong> para consumo pelo frontend em React, padronizando
+              contratos de entrada e saída, validações, rotas, respostas HTTP e tratamento de erros.
+            </li>
 
-                <div class="highlights">
-                    <div class="highlight featured">
-                        <strong>Projeto mobile 100% Offline First</strong> no agronegócio, com backend preparado para sincronização e operação em campo.
-                    </div>
+            <li>
+              Utilização do <strong>Laravel Filament</strong> para criação de painéis administrativos e
+              telas internas de gestão.
+            </li>
 
-                    <div class="highlight">
-                        <strong>Mais de 10 anos</strong> de experiência em backend PHP para sistemas corporativos.
-                    </div>
+            <li>
+              Implementação de filas assíncronas com <strong>AWS SQS</strong> e workers Laravel para
+              processamento de tarefas demoradas em background, evitando bloqueios no fluxo principal da API REST.
+            </li>
 
-                    <div class="highlight">
-                        Forte atuação com <strong>Laravel, APIs REST, integrações corporativas</strong> e aplicações críticas.
-                    </div>
+            <li>
+              Configuração do Laravel para envio de <strong>jobs</strong> para filas SQS, com execução por
+              <strong>workers</strong>, controle de tentativas, tratamento de falhas e reprocessamento de tarefas
+              assíncronas.
+            </li>
 
-                    <div class="highlight">
-                        Experiência com <strong>Salesforce CRM, RabbitMQ, Redis, Laravel Horizon</strong> e processamento assíncrono.
-                    </div>
+            <li>
+              Aplicação do <strong>AWS SQS</strong> em rotinas internas, integrações, processamentos de negócio
+              e operações que não exigiam resposta imediata ao usuário, aumentando a escalabilidade, resiliência
+              e confiabilidade da plataforma.
+            </li>
 
-                    <div class="highlight">
-                        Vivência com <strong>observabilidade</strong>: Laravel Pulse, Telescope, Spatie Health, Log Viewer e alertas no Microsoft Teams.
-                    </div>
+            <li>
+              Adoção do <strong>AWS SQS</strong> em vez de RabbitMQ por ser um serviço gerenciado da AWS,
+              reduzindo a necessidade de manutenção de infraestrutura própria de mensageria, configuração
+              de brokers, alta disponibilidade e operação manual de filas.
+            </li>
 
-                    <div class="highlight">
-                        Experiência em ambientes de <strong>agronegócio, saúde, governo, pagamentos, logística e plataformas SaaS</strong>.
-                    </div>
-                </div>
-            </section>
+            <li>
+              Apoio à integração entre backend Laravel e frontend em <strong>React</strong>, garantindo
+              consistência nos payloads, estados de processamento, fluxos de autenticação e respostas da API.
+            </li>
+          </ul>
+        </article>
 
-            <section>
-                <h2>Competências Técnicas</h2>
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor Backend Freelancer</div>
+              <div class="company">
+                SISBAP ·
+                <a href="https://sisbap.com.br/" target="_blank">sisbap.com.br</a>
+              </div>
+              <div class="context">
+                Projeto freelance paralelo realizado em horário oposto às atividades principais, com manutenção
+                evolutiva em sistema multi-tenant construído em Python/Django, frontend React, rotinas assíncronas,
+                templates de laudos e MySQL
+              </div>
+            </div>
+            <div class="period">01/2025 – 03/2025</div>
+          </div>
 
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Linguagens e Frameworks</h3>
-                        <p>PHP 5/7/8, Laravel, Lumen, CakePHP, CodeIgniter, Python.</p>
-                    </div>
+          <div class="stack">
+            <span class="tag success">Projeto freelance paralelo</span>
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">Multi-tenant</span>
+            <span class="tag">Django ORM</span>
+            <span class="tag">Filas</span>
+            <span class="tag">Jobs</span>
+            <span class="tag">Workers</span>
+            <span class="tag">React</span>
+            <span class="tag">MySQL</span>
+          </div>
 
-                    <div class="skill-card">
-                        <h3>Backend e Arquitetura</h3>
-                        <p>APIs REST, Offline First, sincronização de dados, DDD, SOLID, GRASP, Repository Pattern, DTOs, Dependency Injection, SOAP e GraphQL.</p>
-                    </div>
+          <ul>
+            <li>
+              Atuação em projeto freelance de manutenção evolutiva no sistema SISBAP, aplicação corporativa
+              construída em <strong>Python/Django</strong>, com arquitetura <strong>multi-tenant</strong>,
+              frontend em React e banco de dados MySQL.
+            </li>
 
-                    <div class="skill-card">
-                        <h3>Integrações e Segurança</h3>
-                        <p>Salesforce CRM, SOQL, OAuth2 JWT, SAML2, Azure AD, SSO, JWT, CORS, Microsoft Teams Webhook, APIs externas.</p>
-                    </div>
+            <li>
+              Implementação e evolução de rotinas assíncronas utilizando conceitos de filas, jobs e workers
+              no backend Django, retirando processamentos demorados do fluxo síncrono da aplicação.
+            </li>
 
-                    <div class="skill-card">
-                        <h3>Banco de Dados</h3>
-                        <p>MySQL, MariaDB, PostgreSQL, Oracle, SQL Server, Sybase, MongoDB e Redis.</p>
-                    </div>
+            <li>
+              Estruturação do processamento em background com controle de status das tarefas, permitindo
+              acompanhar etapas como solicitação, processamento, conclusão, falha e reprocessamento.
+            </li>
 
-                    <div class="skill-card">
-                        <h3>Mensageria e Processamento Assíncrono</h3>
-                        <p>RabbitMQ, Redis, Laravel Horizon, Supervisor, Queue Jobs, Workers, retry, backoff e importação incremental.</p>
-                    </div>
+            <li>
+              Modelagem e persistência das informações de controle das filas no <strong>MySQL</strong>,
+              utilizando o <strong>Django ORM</strong> para registrar payloads, status, vínculo com tenant,
+              timestamps, mensagens de erro e resultados do processamento.
+            </li>
 
-                    <div class="skill-card">
-                        <h3>Qualidade e Observabilidade</h3>
-                        <p>TDD, BDD, E2E Testing, Pest, Behat, PHPStan, Larastan, Pint, PHP Insights, OpenAPI, Scramble, Telescope, Laravel Pulse, Spatie Health e Log Viewer.</p>
-                    </div>
+            <li>
+              Adequação das rotinas assíncronas ao contexto <strong>multi-tenant</strong>, garantindo que
+              cada tarefa fosse processada respeitando o isolamento dos dados por cliente/tenant.
+            </li>
 
-                    <div class="skill-card">
-                        <h3>Ferramentas e Colaboração</h3>
-                        <p>Git, Bitbucket, GitLab, SVN, Docker, Laravel Sail, Jenkins, Linux, Composer Scripts, CaptainHook, Confluence e AWS.</p>
-                    </div>
-                </div>
-            </section>
+            <li>
+              Criação e evolução de templates de laudos no backend Django, com foco em padronização,
+              reutilização de estruturas e consistência na geração dos documentos.
+            </li>
 
-            <section>
-                <h2>Experiência Profissional</h2>
+            <li>
+              Ajustes na integração entre backend Django, MySQL e frontend em <strong>React</strong>,
+              garantindo fluxos de geração, consulta, acompanhamento de status e visualização dos laudos.
+            </li>
+          </ul>
+        </article>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="role">Desenvolvedor Backend Sênior</div>
-                            <div class="company">AP Digital Services · Alocação em Yara Brasil</div>
-                            <div class="context">Fertilizantes, nutrição para plantas e consultoria agrícola</div>
-                        </div>
-                        <div class="period">04/2024 – atual</div>
-                    </div>
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor PHP</div>
+              <div class="company">Stargrid</div>
+              <div class="context">Plataforma SaaS healthtech para gestão de escalas hospitalares</div>
+            </div>
+            <div class="period">11/2020 – 03/2024</div>
+          </div>
 
-                    <div class="stack">
-                        <span class="tag success">Projeto Mobile 100% Offline First</span>
-                        <span class="tag">Laravel</span>
-                        <span class="tag">DDD</span>
-                        <span class="tag">Flutter Mobile</span>
-                        <span class="tag">Salesforce CRM</span>
-                        <span class="tag">Redis</span>
-                        <span class="tag">RabbitMQ</span>
-                        <span class="tag">Horizon</span>
-                        <span class="tag">Pulse</span>
-                        <span class="tag">Testes E2E</span>
-                    </div>
+          <div class="stack">
+            <span class="tag">Healthtech</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">RabbitMQ</span>
+            <span class="tag">AWS</span>
+            <span class="tag">APIs REST</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">MongoDB</span>
+          </div>
 
-                    <ul>
-                        <li>
-                            Atuação em sistema crítico de consultoria agrícola, com construção e evolução de API REST versionada em Laravel para aplicação mobile em Flutter.
-                        </li>
-                        <li>
-                            Desenvolvimento de backend preparado para projeto mobile <strong>100% Offline First</strong>, suportando sincronização posterior de dados, operação em campo, consistência das informações e continuidade em áreas remotas.
-                        </li>
-                        <li>
-                            Aplicação de arquitetura orientada a domínio <strong>DDD</strong>, com foco em organização das regras de negócio, separação de responsabilidades e manutenibilidade.
-                        </li>
-                        <li>
-                            Planejamento técnico da migração de <strong>Laravel 10 para Laravel 12</strong>, avaliando impactos em bootstrap, middleware, providers, exceptions, dependências e compatibilidade de pacotes.
-                        </li>
-                        <li>
-                            Desenvolvimento de integrações backend entre sistemas internos, <strong>Salesforce CRM</strong> e APIs externas, incluindo cotação do dólar, dados climáticos e Atfarm API.
-                        </li>
-                        <li>
-                            Implementação de mais de 11 pipelines de importação assíncrona integrados ao Salesforce via OAuth2 JWT e SOQL, com RabbitMQ, Redis e Laravel Horizon.
-                        </li>
-                        <li>
-                            Configuração de Redis para filas, cache e processamento assíncrono, além de Laravel Horizon para monitoramento de workers, throughput, falhas, retries e tempo de processamento.
-                        </li>
-                        <li>
-                            Configuração de stack de observabilidade com Telescope, Laravel Pulse, Horizon, Spatie Health, Log Viewer e alertas automáticos no Microsoft Teams para falhas críticas, exceptions e erros HTTP 5xx.
-                        </li>
-                        <li>
-                            Implementação de autenticação corporativa com SAML2, Azure AD, Sanctum, SSO e cenários de autenticação dupla.
-                        </li>
-                        <li>
-                            Desenvolvimento de painel administrativo com Filament v3 e Livewire para gestão de clientes, contatos, atividades, campanhas e precificação.
-                        </li>
-                        <li>
-                            Aplicação de testes automatizados, incluindo testes E2E, além de práticas de qualidade com Larastan, PHPStan, Pest, Pint, PHP Insights e CaptainHook.
-                        </li>
-                    </ul>
-                </article>
+          <ul>
+            <li>
+              Atuação no core de uma plataforma SaaS healthtech, com foco em alta disponibilidade e
+              sustentação de operação crítica.
+            </li>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="role">Desenvolvedor PHP</div>
-                            <div class="company">Stargrid</div>
-                            <div class="context">Plataforma SaaS healthtech para gestão de escalas hospitalares</div>
-                        </div>
-                        <div class="period">11/2020 – 03/2024</div>
-                    </div>
+            <li>
+              Desenvolvimento e manutenção de APIs REST com PHP e Laravel, implementando regras de negócio
+              complexas e persistência híbrida com MySQL e MongoDB.
+            </li>
 
-                    <div class="stack">
-                        <span class="tag">Healthtech</span>
-                        <span class="tag">Laravel</span>
-                        <span class="tag">RabbitMQ</span>
-                        <span class="tag">AWS</span>
-                        <span class="tag">APIs REST</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
+            <li>
+              Implementação e manutenção de processamento assíncrono com <strong>RabbitMQ</strong>, utilizado
+              para executar rotinas em background, desacoplar tarefas demoradas do fluxo principal da aplicação
+              e melhorar a performance da plataforma SaaS.
+            </li>
 
-                    <ul>
-                        <li>
-                            Atuação no core de uma plataforma SaaS healthtech, com foco em alta disponibilidade e sustentação de operação crítica.
-                        </li>
-                        <li>
-                            Desenvolvimento e manutenção de APIs REST com PHP e Laravel, implementando regras de negócio complexas e persistência híbrida com MySQL e MongoDB.
-                        </li>
-                        <li>
-                            Implementação e gerenciamento de processamento assíncrono com RabbitMQ para otimização de rotinas em background e integração entre serviços.
-                        </li>
-                        <li>
-                            Estruturação de testes automatizados com Cypress e Behat, além de apoio à qualidade contínua com PHP Insights e code review.
-                        </li>
-                        <li>
-                            Apoio em infraestrutura AWS com EC2 e RDS, versionamento via GitLab e colaboração técnica com o time.
-                        </li>
-                    </ul>
-                </article>
+            <li>
+              Utilização de filas para processamentos relacionados a regras de negócio da healthtech,
+              integrações internas, notificações, rotinas operacionais e tarefas que não precisavam ser
+              executadas de forma síncrona durante a requisição do usuário.
+            </li>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="role">Desenvolvedor PHP</div>
-                            <div class="company">DBC Company · Alocação em SouLog / Goodmanager</div>
-                        </div>
-                        <div class="period">05/2020 – 10/2020</div>
-                    </div>
+            <li>
+              Apoio no controle de workers, tratamento de mensagens com falha, reprocessamento de tarefas
+              e acompanhamento do comportamento das filas em ambiente de produção.
+            </li>
 
-                    <ul>
-                        <li>
-                            Evolução do Goodmanager, plataforma corporativa para gestão de processos de licitações.
-                        </li>
-                        <li>
-                            Levantamento de requisitos e desenvolvimento de funcionalidades em backend, frontend e banco de dados.
-                        </li>
-                        <li>
-                            Atuação com Oracle e Sybase em contexto corporativo, apoiando consultas, manutenção e regras de negócio.
-                        </li>
-                    </ul>
-                </article>
+            <li>
+              Uso do <strong>RabbitMQ</strong> pela necessidade de mensageria robusta em ambiente com volume
+              operacional relevante, permitindo maior controle sobre filas, consumidores, entrega de mensagens
+              e processamento assíncrono entre componentes da aplicação.
+            </li>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="role">Desenvolvedor PHP Freelancer</div>
-                            <div class="company">Base em Tecnologia · Brondani Auto Peças · Profissionais SA</div>
-                        </div>
-                        <div class="period">06/2020 – 10/2020</div>
-                    </div>
+            <li>
+              Estruturação de testes automatizados com Cypress e Behat, além de apoio à qualidade contínua
+              com PHP Insights e code review.
+            </li>
 
-                    <ul>
-                        <li>
-                            Manutenção de sites, integração com API AnyMarket e desenvolvimento de integração para consulta de peças automotivas via APIs REST e SOAP.
-                        </li>
-                        <li>
-                            Adequação de CRM em CodeIgniter e integração com RD Station e ExactSales.
-                        </li>
-                    </ul>
-                </article>
+            <li>
+              Apoio em infraestrutura AWS com EC2 e RDS, versionamento via GitLab e colaboração técnica com o time.
+            </li>
+          </ul>
+        </article>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="role">Desenvolvedor Backend</div>
-                            <div class="company">DBC Company · Alocação em Ticket Log</div>
-                            <div class="context">Gestão de frotas e meios de pagamento</div>
-                        </div>
-                        <div class="period">05/2018 – 06/2020</div>
-                    </div>
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor de Software Laravel</div>
+              <div class="company">WK Technology · Freelance</div>
+              <div class="context">
+                Projeto freelance remoto para o Detran/PR: API REST em Laravel e integração com reconhecimento facial
+                Gryfo para controle de presença em aulas remotas de formação de condutores — Florianópolis, SC
+              </div>
+            </div>
+            <div class="period">03/2021 – 09/2021</div>
+          </div>
 
-                    <ul>
-                        <li>
-                            Desenvolvimento e sustentação de sistemas corporativos para gestão de frotas e meios de pagamento em ambiente de alta criticidade.
-                        </li>
-                        <li>
-                            Desenvolvimento de funcionalidades com PHP, ColdFusion e Java.
-                        </li>
-                        <li>
-                            Criação e manutenção de procedures em Oracle e Sybase para suporte a regras de negócio e processamento de dados.
-                        </li>
-                        <li>
-                            Participação em projeto de adequação de sistemas web às diretrizes de acessibilidade com HTML5, NVDA, eMAG e Google Lighthouse.
-                        </li>
-                    </ul>
-                </article>
+          <div class="stack">
+            <span class="tag success">Projeto freelance paralelo</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Detran/PR</span>
+            <span class="tag">Gryfo</span>
+            <span class="tag">Biometria</span>
+            <span class="tag">Integrações</span>
+          </div>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="role">Desenvolvedor PHP</div>
-                            <div class="company">RZ2 Sistemas de Gestão</div>
-                        </div>
-                        <div class="period">07/2017 – 04/2018</div>
-                    </div>
+          <ul>
+            <li>
+              Backend em Laravel para registrar e auditar a presença de alunos em <strong>aulas remotas</strong>
+              de autoescolas credenciadas ao <strong>Detran/PR</strong>, em conformidade com exigências do órgão.
+            </li>
 
-                    <ul>
-                        <li>
-                            Desenvolvimento de APIs REST com CORS e JWT seguindo a especificação JSON:API.
-                        </li>
-                        <li>
-                            Utilização de Lumen e Doctrine na construção de serviços backend.
-                        </li>
-                        <li>
-                            Implementação de testes de integração, apoio em deploy com Jenkins e execução de testes de carga com JMeter.
-                        </li>
-                    </ul>
-                </article>
+            <li>
+              Desenvolvimento de <strong>API REST</strong> com endpoints para alunos, turmas/aulas, sessões remotas
+              e registro de presença — contratos JSON, validação, autenticação e persistência das operações.
+            </li>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="role">Analista Desenvolvedor PHP</div>
-                            <div class="company">AdvancedIT · Alocação em Inmetro</div>
-                            <div class="context">Projeto Cronotacógrafo</div>
-                        </div>
-                        <div class="period">03/2015 – 05/2017</div>
-                    </div>
+            <li>
+              Camada de orquestração entre a plataforma de ensino e serviços externos, centralizando regras de
+              negócio e normalizando respostas para frontend e integrações parceiras.
+            </li>
 
-                    <ul>
-                        <li>
-                            Levantamento de requisitos e desenvolvimento de soluções para o Inmetro.
-                        </li>
-                        <li>
-                            Desenvolvimento com PHP, CakePHP e Oracle em sistema ligado a processo regulatório.
-                        </li>
-                        <li>
-                            Mapeamento de processos de negócio com BPMN utilizando Bizagi.
-                        </li>
-                    </ul>
-                </article>
+            <li>
+              Integração com a plataforma <strong>Gryfo</strong> de reconhecimento facial: envio de dados biométricos,
+              recebimento do resultado da verificação e vínculo do match ao aluno e à aula em andamento.
+            </li>
 
-                <article class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="role">Experiências Anteriores</div>
-                            <div class="company">Construtora Pelotense · Constat · EMATER/ASCAR · CWI</div>
-                        </div>
-                        <div class="period">2011 – 2015</div>
-                    </div>
+            <li>
+              Fluxo de presença com identificação facial no início da aula remota; tratamento de falhas,
+              reprocessamento e histórico para rastreabilidade e auditoria.
+            </li>
+          </ul>
+        </article>
 
-                    <ul>
-                        <li>
-                            Desenvolvimento de sistemas web internos, integrações com bases corporativas, manutenção de aplicações e suporte técnico.
-                        </li>
-                        <li>
-                            Experiência com PHP, Laravel, CodeIgniter, Zend Framework, .NET, SQL Server, MySQL, Oracle e Java.
-                        </li>
-                        <li>
-                            Vivência em levantamento de requisitos, TDD, documentação técnica, ambiente Linux e projetos corporativos.
-                        </li>
-                    </ul>
-                </article>
-            </section>
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor Backend Freelancer</div>
+              <div class="company">Projeto para escritório de advocacia</div>
+              <div class="context">
+                Projeto freelance paralelo realizado em horário oposto às atividades principais, com automação
+                em Python para download, processamento e carga dos dados públicos de CNPJ da Receita Federal em MySQL
+              </div>
+            </div>
+            <div class="period">2023 · 2 meses</div>
+          </div>
 
-            <section>
-                <h2>Formação Acadêmica</h2>
+          <div class="stack">
+            <span class="tag success">Projeto freelance paralelo</span>
+            <span class="tag">Python</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Automação</span>
+            <span class="tag">Processamento em Lote</span>
+            <span class="tag">Dados Públicos CNPJ</span>
+          </div>
 
-                <div class="education-grid">
-                    <div class="education-item">
-                        <strong>Pós-Graduação em Sistemas de Informação com Métodos Ágeis</strong><br />
-                        <span class="muted">UniRitter | 2014 – 2016</span><br />
-                        <span class="muted">Artigo: Aplicação de Domain-Driven Design no Gerenciamento de GRU de Cronotacógrafo no Inmetro/RS</span>
-                    </div>
+          <ul>
+            <li>
+              Desenvolvimento de automação em <strong>Python</strong> para baixar, organizar, processar e
+              importar os dados públicos de CNPJ disponibilizados pela Receita Federal.
+            </li>
 
-                    <div class="education-item">
-                        <strong>Graduação em Análise e Desenvolvimento de Sistemas</strong><br />
-                        <span class="muted">Faculdades QI | 2010 – 2013</span>
-                    </div>
+            <li>
+              Implementação de rotina automatizada para download dos arquivos oficiais, controle de arquivos
+              processados, extração dos conteúdos compactados e preparação dos dados para carga em MySQL.
+            </li>
 
-                    <div class="education-item">
-                        <strong>Técnico em Informática</strong><br />
-                        <span class="muted">Faculdade QI | 2008 – 2010</span>
-                    </div>
-                </div>
-            </section>
+            <li>
+              Estratégia baseada em <strong>processamento em lotes</strong>, leitura incremental e inserções
+              em massa, evitando carregar grandes volumes em memória.
+            </li>
 
-            <section>
-                <h2>Cursos e Certificações</h2>
+            <li>
+              Criação de fluxo de ETL com etapas de download, extração, normalização, validação, transformação
+              e persistência dos dados.
+            </li>
 
-                <div class="cert-grid">
-                    <div class="cert-item">
-                        <strong>Flutter para Android e iOS</strong><br />
-                        <span class="muted">Udemy | 07/2025 | 60 horas</span>
-                    </div>
+            <li>
+              Utilização de tabelas intermediárias/staging no MySQL para receber grandes massas de dados antes
+              da consolidação nas tabelas finais.
+            </li>
 
-                    <div class="cert-item">
-                        <strong>Python 3: do básico ao avançado</strong><br />
-                        <span class="muted">Udemy | 11/2020</span>
-                    </div>
+            <li>
+              Implementação de mecanismos de retomada em caso de falha, com logs de execução, controle de
+              progresso por arquivo e prevenção de duplicidade no reprocessamento.
+            </li>
+          </ul>
+        </article>
 
-                    <div class="cert-item">
-                        <strong>iMasters Certified Professional – PHP Boas Práticas</strong><br />
-                        <span class="muted">04/2017</span>
-                    </div>
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor PHP</div>
+              <div class="company">DBC Company · Alocação em SouLog / Goodmanager</div>
+              <div class="context">Plataforma corporativa para gestão de processos de licitações</div>
+            </div>
+            <div class="period">05/2020 – 10/2020</div>
+          </div>
 
-                    <div class="cert-item">
-                        <strong>BDD - Testes Guiados por Comportamento com Behat PHP</strong><br />
-                        <span class="muted">TreinaWeb | 09/2017</span>
-                    </div>
+          <div class="stack">
+            <span class="tag">PHP</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">Sybase</span>
+            <span class="tag">Sistemas Corporativos</span>
+            <span class="tag">Levantamento de Requisitos</span>
+          </div>
 
-                    <div class="cert-item">
-                        <strong>Zend Expressive - Microframework PHP</strong><br />
-                        <span class="muted">TreinaWeb | 08/2017</span>
-                    </div>
+          <ul>
+            <li>
+              Evolução do Goodmanager, plataforma corporativa para gestão de processos de licitações.
+            </li>
 
-                    <div class="cert-item">
-                        <strong>PostgreSQL - Desenvolvedor / DBA</strong><br />
-                        <span class="muted">TreinaWeb | 2017</span>
-                    </div>
-                </div>
-            </section>
-        </main>
+            <li>
+              Levantamento de requisitos e desenvolvimento de funcionalidades em backend, frontend e banco de dados.
+            </li>
 
-        <footer>
-            Currículo profissional — Tiago O. de Farias
-        </footer>
-    </div>
+            <li>
+              Atuação com Oracle e Sybase em contexto corporativo, apoiando consultas, manutenção e regras de negócio.
+            </li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor PHP Freelancer</div>
+              <div class="company">Base em Tecnologia · Brondani Auto Peças · Profissionais SA</div>
+              <div class="context">
+                Projetos freelance paralelos realizados em horário oposto às atividades principais, envolvendo
+                integrações, manutenção de sites, CRM e APIs para e-commerce automotivo
+              </div>
+            </div>
+            <div class="period">06/2020 – 10/2020</div>
+          </div>
+
+          <div class="stack">
+            <span class="tag success">Projetos freelance paralelos</span>
+            <span class="tag">PHP</span>
+            <span class="tag">CodeIgniter</span>
+            <span class="tag">APIs REST</span>
+            <span class="tag">SOAP</span>
+            <span class="tag">AnyMarket</span>
+            <span class="tag">RD Station</span>
+            <span class="tag">ExactSales</span>
+          </div>
+
+          <ul>
+            <li>
+              Manutenção de sites, integração com API AnyMarket e desenvolvimento de integração para consulta
+              de peças automotivas via APIs REST e SOAP.
+            </li>
+
+            <li>
+              Adequação de CRM em CodeIgniter e integração com RD Station e ExactSales.
+            </li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor Backend</div>
+              <div class="company">DBC Company · Alocação em Ticket Log</div>
+              <div class="context">
+                Sistemas corporativos para gestão de frotas, meios de pagamento, integrações internas e sustentação de aplicações críticas
+              </div>
+            </div>
+            <div class="period">05/2018 – 06/2020</div>
+          </div>
+
+          <div class="stack">
+            <span class="tag">PHP</span>
+            <span class="tag">ColdFusion</span>
+            <span class="tag">Java</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">Sybase</span>
+            <span class="tag">Kanban</span>
+            <span class="tag">Sprint Planning</span>
+            <span class="tag">Azure DevOps</span>
+            <span class="tag">Sustentação</span>
+            <span class="tag">Acessibilidade Web</span>
+          </div>
+
+          <ul>
+            <li>
+              Atuação em ambiente corporativo de alta criticidade na <strong>Ticket Log</strong>,
+              empresa do segmento de gestão de frotas, abastecimento, manutenção veicular e meios de pagamento.
+            </li>
+
+            <li>
+              Desenvolvimento, manutenção evolutiva e sustentação de sistemas internos utilizando
+              <strong>PHP</strong>, <strong>ColdFusion</strong> e <strong>Java</strong>.
+            </li>
+
+            <li>
+              Implementação de funcionalidades backend, ajustes em regras de negócio, correção de incidentes,
+              análise de problemas em produção e melhoria de rotinas operacionais.
+            </li>
+
+            <li>
+              Atuação com bancos <strong>Oracle</strong> e <strong>Sybase</strong>, criando e mantendo queries,
+              procedures, ajustes de performance, validação de dados e apoio a processos transacionais.
+            </li>
+
+            <li>
+              Participação em rotina ágil com <strong>Kanban</strong>, sprint planning, refinamentos,
+              estimativas, análise de impacto e alinhamento técnico com o time.
+            </li>
+
+            <li>
+              Utilização de <strong>Azure DevOps</strong> para acompanhamento de demandas, gestão de backlog,
+              registro de bugs, documentação de tarefas e apoio ao fluxo de desenvolvimento.
+            </li>
+
+            <li>
+              Apoio à sustentação de sistemas críticos, atuando na investigação de incidentes, análise de logs,
+              reprodução de cenários, correção de falhas e validação junto às áreas envolvidas.
+            </li>
+
+            <li>
+              Participação em projeto de adequação de sistemas web às diretrizes de acessibilidade, utilizando
+              <strong>HTML5</strong>, validações com <strong>NVDA</strong>, recomendações do
+              <strong>eMAG</strong> e análises com <strong>Google Lighthouse</strong>.
+            </li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Desenvolvedor PHP</div>
+              <div class="company">RZ2 Sistemas de Gestão</div>
+              <div class="context">APIs REST, serviços backend e integração de sistemas</div>
+            </div>
+            <div class="period">07/2017 – 04/2018</div>
+          </div>
+
+          <div class="stack">
+            <span class="tag">PHP</span>
+            <span class="tag">Lumen</span>
+            <span class="tag">Doctrine</span>
+            <span class="tag">APIs REST</span>
+            <span class="tag">JWT</span>
+            <span class="tag">JSON:API</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">JMeter</span>
+          </div>
+
+          <ul>
+            <li>
+              Desenvolvimento de APIs REST com CORS e JWT seguindo a especificação JSON:API.
+            </li>
+
+            <li>
+              Utilização de Lumen e Doctrine na construção de serviços backend.
+            </li>
+
+            <li>
+              Implementação de testes de integração, apoio em deploy com Jenkins e execução de testes de carga com JMeter.
+            </li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Analista Desenvolvedor PHP</div>
+              <div class="company">AdvancedIT · Alocação em Inmetro</div>
+              <div class="context">
+                Projeto Cronotacógrafo — sistema nacional de controle, verificação e gestão metrológica de cronotacógrafos
+                <br />
+                <a href="https://cronotacografo.rbmlq.gov.br/" target="_blank">cronotacografo.rbmlq.gov.br</a>
+              </div>
+            </div>
+            <div class="period">03/2015 – 05/2017</div>
+          </div>
+
+          <div class="stack">
+            <span class="tag">PHP</span>
+            <span class="tag">CakePHP</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">Inmetro</span>
+            <span class="tag">Sistema Governamental</span>
+            <span class="tag">Metrologia Legal</span>
+            <span class="tag">BPMN</span>
+            <span class="tag">Bizagi</span>
+          </div>
+
+          <ul>
+            <li>
+              Atuação no <strong>Projeto Cronotacógrafo</strong>, sistema utilizado no contexto do Inmetro
+              e da Rede Brasileira de Metrologia Legal e Qualidade.
+            </li>
+
+            <li>
+              Desenvolvimento e manutenção de funcionalidades em sistema web governamental, apoiando fluxos
+              ligados a ensaios, verificações, emissão de documentos, consultas e acompanhamento dos processos.
+            </li>
+
+            <li>
+              Desenvolvimento backend com <strong>PHP</strong> e <strong>CakePHP</strong>, implementando
+              regras de negócio relacionadas ao processo regulatório e à gestão das informações.
+            </li>
+
+            <li>
+              Atuação com banco de dados <strong>Oracle</strong>, realizando consultas, manutenção de estruturas,
+              ajustes em persistência e apoio à integridade das informações.
+            </li>
+
+            <li>
+              Levantamento e análise de requisitos junto às áreas envolvidas, traduzindo necessidades operacionais
+              e regras regulatórias em funcionalidades sistêmicas.
+            </li>
+
+            <li>
+              Mapeamento de processos de negócio com <strong>BPMN</strong> utilizando <strong>Bizagi</strong>.
+            </li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Experiências Anteriores</div>
+              <div class="company">Construtora Pelotense · Constat · EMATER/ASCAR · CWI</div>
+              <div class="context">Sistemas web internos, integrações corporativas, manutenção de aplicações e suporte técnico</div>
+            </div>
+            <div class="period">2011 – 2015</div>
+          </div>
+
+          <div class="stack">
+            <span class="tag">PHP</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">CodeIgniter</span>
+            <span class="tag">Zend Framework</span>
+            <span class="tag">.NET</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">Java</span>
+            <span class="tag">Linux</span>
+          </div>
+
+          <ul>
+            <li>
+              Desenvolvimento de sistemas web internos, integrações com bases corporativas, manutenção de aplicações
+              e suporte técnico.
+            </li>
+
+            <li>
+              Experiência com PHP, Laravel, CodeIgniter, Zend Framework, .NET, SQL Server, MySQL, Oracle e Java.
+            </li>
+
+            <li>
+              Vivência em levantamento de requisitos, TDD, documentação técnica, ambiente Linux e projetos corporativos.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Formação Acadêmica</h2>
+
+        <div class="education-grid">
+          <div class="education-item">
+            <strong>Pós-Graduação em Sistemas de Informação com Métodos Ágeis</strong>
+            <br />
+            <span class="muted">UniRitter | 2014 – 2016</span>
+            <br />
+            <span class="muted">
+              Artigo: Aplicação de Domain-Driven Design no Gerenciamento de GRU de Cronotacógrafo no Inmetro/RS
+            </span>
+          </div>
+
+          <div class="education-item">
+            <strong>Graduação em Análise e Desenvolvimento de Sistemas</strong>
+            <br />
+            <span class="muted">Faculdades QI | 2010 – 2013</span>
+          </div>
+
+          <div class="education-item">
+            <strong>Técnico em Informática</strong>
+            <br />
+            <span class="muted">Faculdade QI | 2008 – 2010</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Cursos e Certificações</h2>
+
+        <div class="cert-grid">
+          <div class="cert-item">
+            <strong>Flutter para Android e iOS</strong>
+            <br />
+            <span class="muted">Udemy | 07/2025 | 60 horas</span>
+          </div>
+
+          <div class="cert-item">
+            <strong>Python 3: do básico ao avançado</strong>
+            <br />
+            <span class="muted">Udemy | 11/2020</span>
+          </div>
+
+          <div class="cert-item">
+            <strong>iMasters Certified Professional – PHP Boas Práticas</strong>
+            <br />
+            <span class="muted">04/2017</span>
+          </div>
+
+          <div class="cert-item">
+            <strong>BDD - Testes Guiados por Comportamento com Behat PHP</strong>
+            <br />
+            <span class="muted">TreinaWeb | 09/2017</span>
+          </div>
+
+          <div class="cert-item">
+            <strong>Zend Expressive - Microframework PHP</strong>
+            <br />
+            <span class="muted">TreinaWeb | 08/2017</span>
+          </div>
+
+          <div class="cert-item">
+            <strong>PostgreSQL - Desenvolvedor / DBA</strong>
+            <br />
+            <span class="muted">TreinaWeb | 2017</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Currículo profissional — Tiago O. de Farias</footer>
+  </div>
 </body>
 </html>
