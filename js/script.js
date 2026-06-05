@@ -350,3 +350,147 @@ window.addEventListener(
   }
   if (!stored) open();
 })();
+
+(function initModernAnimations() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function initHeroEntrance() {
+    const heroContent = document.querySelector('.hero-content');
+    const heroVisual = document.querySelector('.hero-visual');
+    if (!heroContent) return;
+
+    const items = [
+      ...heroContent.querySelectorAll(
+        ':scope > .tag, :scope > h1, :scope > .hero-subtitle, :scope > .hero-desc, :scope > .hero-cta, :scope > .hero-stats, :scope > .recruiter-note, :scope > .drone-trust-note'
+      ),
+    ];
+    items.forEach((el, i) => {
+      el.classList.add('hero-animate', `hero-animate--${Math.min(i + 1, 6)}`);
+    });
+
+    if (heroVisual) {
+      const cards = heroVisual.querySelectorAll('.drone-card');
+      if (cards.length) {
+        cards.forEach((card, i) => {
+          card.classList.add('hero-animate', `hero-animate--${7 + i}`);
+        });
+      } else {
+        heroVisual.classList.add('hero-animate', 'hero-animate--7', 'reveal--scale');
+      }
+    }
+  }
+
+  function initTypingSubtitle() {
+    const subtitle = document.querySelector('.hero-subtitle');
+    if (!subtitle || reduced) return;
+
+    const lang = document.body.classList.contains('lang-en') ? '.t--en' : '.t--pt';
+    const target = subtitle.querySelector(lang) || subtitle;
+    const fullText = target.textContent.trim();
+    if (!fullText) return;
+
+    target.textContent = '';
+    target.setAttribute('aria-label', fullText);
+
+    const cursor = document.createElement('span');
+    cursor.className = 'hero-cursor';
+    cursor.setAttribute('aria-hidden', 'true');
+    target.appendChild(cursor);
+
+    let i = 0;
+    const speed = 22;
+
+    function type() {
+      if (i < fullText.length) {
+        target.insertBefore(document.createTextNode(fullText.charAt(i)), cursor);
+        i += 1;
+        setTimeout(type, speed);
+      } else {
+        setTimeout(() => cursor.remove(), 3000);
+      }
+    }
+
+    setTimeout(type, 700);
+  }
+
+  function initScrollReveal() {
+    const selectors = [
+      '.section .tag',
+      '.section .section-title',
+      '.section .section-lead',
+      '.about-p',
+      '.highlight-card',
+      '.skill-group',
+      '.timeline-item',
+      '.edu-card',
+      '.certs-list li',
+      '.contact-inner > *',
+    ];
+
+    const elements = [...document.querySelectorAll(selectors.join(', '))].filter(
+      (el) => !el.closest('.hero')
+    );
+    elements.forEach((el, index) => {
+      el.classList.add('reveal');
+      if (el.classList.contains('timeline-item')) {
+        el.classList.add('reveal--left');
+      }
+      const delay = (index % 6) * 120;
+      el.style.transitionDelay = `${delay}ms`;
+    });
+
+    if (reduced) {
+      elements.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  }
+
+  function initNavActive() {
+    const links = document.querySelectorAll('.nav-desktop a[href^="#"]');
+    if (!links.length) return;
+
+    const sections = [...links]
+      .map((link) => {
+        const id = link.getAttribute('href').slice(1);
+        const section = document.getElementById(id);
+        return section ? { link, section } : null;
+      })
+      .filter(Boolean);
+
+    if (!sections.length) return;
+
+    function updateActive() {
+      const scrollY = window.scrollY + 120;
+      let current = sections[0];
+
+      sections.forEach((item) => {
+        if (item.section.offsetTop <= scrollY) current = item;
+      });
+
+      links.forEach((l) => l.classList.remove('is-active'));
+      current.link.classList.add('is-active');
+    }
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+  }
+
+  initHeroEntrance();
+  initTypingSubtitle();
+  initScrollReveal();
+  initNavActive();
+})();

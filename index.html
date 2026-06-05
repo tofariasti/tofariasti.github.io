@@ -14,9 +14,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body class="lang-pt" id="top">
+  <div class="page-bg" aria-hidden="true">
+    <span class="page-bg__blob page-bg__blob--1"></span>
+    <span class="page-bg__blob page-bg__blob--2"></span>
+    <span class="page-bg__blob page-bg__blob--3"></span>
+    <span class="page-bg__blob page-bg__blob--4"></span>
+  </div>
   <header id="header">
     <div class="header-bar-wrap">
       <div class="container nav-floating">
@@ -91,6 +97,7 @@
 
   <main>
     <section class="hero" id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-content">
           <span class="tag tag--accent"><span class="t--pt">Desenvolvedor Backend Sênior</span><span class="t--en">Senior Backend Developer</span></span>
@@ -281,6 +288,40 @@
               <li>Async processing with RabbitMQ for background routines</li>
               <li>Cypress and Behat testing; PHP Insights and code review</li>
               <li>AWS infrastructure (EC2, RDS); GitLab; React, Alpine.js and Livewire</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <time datetime="2021-03/2021-09">03/2021 – 09/2021</time>
+              <span class="timeline-place"><span class="t--pt">Florianópolis, SC — Remoto</span><span class="t--en">Florianópolis, SC — Remote</span></span>
+            </div>
+            <h3>Desenvolvedor de Software Laravel <span class="timeline-en">/ Laravel Software Developer</span></h3>
+            <p class="timeline-company">WK Technology · <span class="t--pt">Freelance</span><span class="t--en">Freelance</span></p>
+            <p class="timeline-context t--pt">Controle de presença em aulas remotas de formação de condutores — credenciamento Detran/PR</p>
+            <p class="timeline-context t--en">Attendance control for remote driver training classes — Detran/PR (Paraná) accreditation</p>
+            <div class="tag-row">
+              <span class="pill">Laravel</span><span class="pill">REST API</span>
+              <span class="pill">Detran/PR</span><span class="pill">Gryfo</span>
+              <span class="pill">Biometria</span><span class="pill">Integrações</span>
+            </div>
+            <ul class="timeline-bullets t--pt">
+              <li>Projeto para o <strong>Detran/PR</strong>: backend em Laravel responsável por registrar e auditar a presença de alunos em <strong>aulas remotas</strong> de autoescolas credenciadas, em conformidade com exigências do órgão</li>
+              <li>Desenvolvimento de <strong>API REST</strong> com endpoints para alunos, turmas/aulas, sessões remotas e registro de presença — contratos JSON, validação de entrada, autenticação e persistência das operações</li>
+              <li>Camada de orquestração entre a plataforma de ensino e serviços externos: a API centraliza regras de negócio, normaliza respostas e expõe fluxos consumíveis pelo frontend e por integrações parceiras</li>
+              <li>Integração com a plataforma <strong>Gryfo</strong> de reconhecimento facial: envio de dados biométricos, recebimento do resultado da verificação e amarração do match ao aluno e à aula em andamento</li>
+              <li>Fluxo de presença: identificação facial do aluno no início (e/ou durante) da aula remota; confirmação de que a pessoa logada corresponde ao cadastro antes de validar a frequência junto ao Detran/PR</li>
+              <li>Tratamento de falhas de reconhecimento, inconsistências e reprocessamento; registro de tentativas e histórico para rastreabilidade e auditoria do processo</li>
+              <li>Atuação remota na WK Technology com foco em backend Laravel, documentação dos endpoints e entrega incremental do serviço de integração</li>
+            </ul>
+            <ul class="timeline-bullets t--en">
+              <li><strong>Detran/PR</strong> project: Laravel backend to record and audit student attendance in <strong>remote classes</strong> at accredited driving schools, meeting state traffic department requirements</li>
+              <li><strong>REST API</strong> development with endpoints for students, classes, remote sessions and attendance records — JSON contracts, input validation, authentication and operation persistence</li>
+              <li>Orchestration layer between the training platform and external services: the API centralizes business rules, normalizes responses and exposes flows for the frontend and partner integrations</li>
+              <li>Integration with the <strong>Gryfo</strong> facial recognition platform: biometric submission, verification result handling and linking the match to the student and active class session</li>
+              <li>Attendance flow: facial identification at the start (and/or during) remote lessons; confirmation that the logged-in person matches enrollment records before marking attendance for Detran/PR</li>
+              <li>Handling of recognition failures, inconsistencies and retries; attempt logging and history for traceability and process audit</li>
+              <li>Remote work at WK Technology focused on Laravel backend, API documentation and incremental delivery of the integration service</li>
             </ul>
           </article>
 
@@ -574,6 +615,6 @@
     </div>
   </div>
 
-  <script src="js/script.js?v=3" defer></script>
+  <script src="js/script.js?v=5" defer></script>
 </body>
 </html>
