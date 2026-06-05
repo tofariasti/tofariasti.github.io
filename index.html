@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body class="lang-pt" id="top">
   <div class="page-bg" aria-hidden="true">
@@ -580,8 +580,8 @@
       <div class="container">
         <span class="tag tag--accent"><span class="t--pt">Destaques</span><span class="t--en">Highlights</span></span>
         <h2 class="section-title"><span class="t--pt">Projetos e experiência</span><span class="t--en">Projects &amp; experience</span></h2>
-        <p class="section-lead t--pt">Casos corporativos e repositórios open source com foco em APIs, regras de negócio e integração entre serviços.</p>
-        <p class="section-lead t--en">Corporate cases and open-source repos focused on APIs, business rules and service integration.</p>
+        <p class="section-lead t--pt">Casos corporativos, projetos freelance e repositórios open source — APIs REST, filas, integrações e regras de negócio em produção.</p>
+        <p class="section-lead t--en">Corporate cases, freelance projects and open-source repos — REST APIs, queues, integrations and business rules in production.</p>
 
         <div class="portfolio-carousel-wrap">
           <button type="button" class="portfolio-nav portfolio-nav--prev" aria-label="Anterior">&lsaquo;</button>
@@ -589,35 +589,127 @@
             <article class="project-card">
               <span class="project-badge">2024+ · Corporate</span>
               <h3>Yara Brasil · Offline First</h3>
-              <div class="tag-row"><span class="pill">Laravel</span><span class="pill">Flutter</span><span class="pill">Salesforce</span><span class="pill">Horizon</span></div>
-              <p class="t--pt">Consultoria agrícola (Yara Brasil) com app Flutter offline e API Laravel DDD — integrações Salesforce, câmbio, clima e Atfarm API.</p>
-              <p class="t--en">Agricultural consulting (Yara Brazil) with offline Flutter app and DDD Laravel API — Salesforce, FX, weather and Atfarm API integrations.</p>
+              <div class="tag-row"><span class="pill">Laravel</span><span class="pill">DDD</span><span class="pill">Flutter</span><span class="pill">Salesforce</span><span class="pill">Redis</span><span class="pill">Horizon</span></div>
+              <p class="t--pt">Consultoria agrícola com app Flutter offline e API Laravel DDD — Salesforce, câmbio, clima, Atfarm API e SSO SAML2/Azure AD.</p>
+              <p class="t--en">Agricultural consulting with offline Flutter app and DDD Laravel API — Salesforce, FX, weather, Atfarm API and SAML2/Azure AD SSO.</p>
               <ul class="project-features t--pt">
                 <li>Backend 100% Offline First com sincronização em campo</li>
-                <li>11+ pipelines assíncronos Salesforce (RabbitMQ, Horizon)</li>
-                <li>Observabilidade e alertas automáticos Microsoft Teams</li>
+                <li>11+ pipelines assíncronos Salesforce (Redis, Horizon)</li>
+                <li>Observabilidade, Filament v3 e alertas Microsoft Teams</li>
               </ul>
               <ul class="project-features t--en">
                 <li>100% Offline First backend with field sync</li>
-                <li>11+ async Salesforce pipelines (RabbitMQ, Horizon)</li>
-                <li>Observability and automated Microsoft Teams alerts</li>
+                <li>11+ async Salesforce pipelines (Redis, Horizon)</li>
+                <li>Observability, Filament v3 and Microsoft Teams alerts</li>
               </ul>
+            </article>
+
+            <article class="project-card project-card--freelance">
+              <span class="project-badge project-badge--freelance">2025 · Freelance</span>
+              <h3>Corrige Aí · API REST</h3>
+              <div class="tag-row"><span class="pill">Laravel 10</span><span class="pill">DDD</span><span class="pill">Filament</span><span class="pill">AWS SQS</span><span class="pill">React</span></div>
+              <p class="t--pt">Reconstrução arquitetural da API REST em Laravel 10 com DDD, Filament, filas AWS SQS e integração com frontend React.</p>
+              <p class="t--en">Architectural rebuild of the Laravel 10 REST API with DDD, Filament, AWS SQS queues and React frontend integration.</p>
+              <ul class="project-features t--pt">
+                <li>Camadas desacopladas com Clean Code, SOLID e PSRs</li>
+                <li>Workers Laravel para processamento assíncrono via SQS</li>
+              </ul>
+              <ul class="project-features t--en">
+                <li>Decoupled layers with Clean Code, SOLID and PSRs</li>
+                <li>Laravel workers for async processing via SQS</li>
+              </ul>
+              <a href="https://corrigeai.com/" class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer"><span class="t--pt">Site</span><span class="t--en">Website</span></a>
+            </article>
+
+            <article class="project-card project-card--freelance">
+              <span class="project-badge project-badge--freelance">2025 · Freelance</span>
+              <h3>SISBAP · Multi-tenant</h3>
+              <div class="tag-row"><span class="pill">Python</span><span class="pill">Django</span><span class="pill">Multi-tenant</span><span class="pill">MySQL</span><span class="pill">React</span></div>
+              <p class="t--pt">Manutenção evolutiva em sistema corporativo Django multi-tenant — filas, jobs, workers, laudos e integração React.</p>
+              <p class="t--en">Evolutionary maintenance on a corporate Django multi-tenant system — queues, jobs, workers, reports and React integration.</p>
+              <ul class="project-features t--pt">
+                <li>Rotinas assíncronas com controle de status por tenant</li>
+                <li>Templates de laudos e persistência via Django ORM</li>
+              </ul>
+              <ul class="project-features t--en">
+                <li>Async routines with per-tenant status tracking</li>
+                <li>Report templates and persistence via Django ORM</li>
+              </ul>
+              <a href="https://sisbap.com.br/" class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer"><span class="t--pt">Site</span><span class="t--en">Website</span></a>
             </article>
 
             <article class="project-card">
               <span class="project-badge">2020–2024 · Healthtech</span>
               <h3>Stargrid · Escalas hospitalares</h3>
-              <div class="tag-row"><span class="pill">Laravel</span><span class="pill">RabbitMQ</span><span class="pill">AWS</span></div>
-              <p class="t--pt">Plataforma SaaS para gestão de escalas com alta disponibilidade, APIs REST e processamento assíncrono.</p>
-              <p class="t--en">SaaS platform for shift management with high availability, REST APIs and async processing.</p>
+              <div class="tag-row"><span class="pill">Laravel</span><span class="pill">RabbitMQ</span><span class="pill">AWS</span><span class="pill">MongoDB</span></div>
+              <p class="t--pt">Plataforma SaaS healthtech para gestão de escalas hospitalares — alta disponibilidade, APIs REST e mensageria robusta.</p>
+              <p class="t--en">Healthtech SaaS for hospital shift management — high availability, REST APIs and robust messaging.</p>
+              <ul class="project-features t--pt">
+                <li>Processamento assíncrono com RabbitMQ e workers</li>
+                <li>Persistência híbrida MySQL + MongoDB</li>
+              </ul>
+              <ul class="project-features t--en">
+                <li>Async processing with RabbitMQ and workers</li>
+                <li>Hybrid MySQL + MongoDB persistence</li>
+              </ul>
+            </article>
+
+            <article class="project-card project-card--freelance">
+              <span class="project-badge project-badge--freelance">2021 · Freelance</span>
+              <h3>WK Technology · Detran/PR</h3>
+              <div class="tag-row"><span class="pill">Laravel</span><span class="pill">REST API</span><span class="pill">Gryfo</span><span class="pill">Biometria</span></div>
+              <p class="t--pt">API REST para o Detran/PR com integração Gryfo — reconhecimento facial para presença em aulas remotas de autoescolas.</p>
+              <p class="t--en">REST API for Detran/PR with Gryfo integration — facial recognition for attendance in remote driving-school classes.</p>
+              <ul class="project-features t--pt">
+                <li>Orquestração entre plataforma de ensino e biometria</li>
+                <li>Auditoria e rastreabilidade de presença remota</li>
+              </ul>
+              <ul class="project-features t--en">
+                <li>Orchestration between training platform and biometrics</li>
+                <li>Audit trail for remote attendance</li>
+              </ul>
+            </article>
+
+            <article class="project-card">
+              <span class="project-badge">2015–2017 · Governo</span>
+              <h3>Inmetro · Cronotacógrafo</h3>
+              <div class="tag-row"><span class="pill">CakePHP</span><span class="pill">Oracle</span><span class="pill">BPMN</span></div>
+              <p class="t--pt">Sistema governamental de metrologia legal — ensaios, verificações e gestão de cronotacógrafos no contexto do Inmetro.</p>
+              <p class="t--en">Government legal metrology system — tests, verifications and chronotachograph management at Inmetro.</p>
+              <a href="https://cronotacografo.rbmlq.gov.br/" class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer"><span class="t--pt">Sistema</span><span class="t--en">System</span></a>
             </article>
 
             <article class="project-card">
               <span class="project-badge">2018–2020 · Fintech</span>
               <h3>Ticket Log · Meios de pagamento</h3>
               <div class="tag-row"><span class="pill">PHP</span><span class="pill">ColdFusion</span><span class="pill">Java</span><span class="pill">Oracle</span><span class="pill">Sybase</span></div>
-              <p class="t--pt">Sistemas críticos de gestão de frotas e pagamentos com PHP, ColdFusion e Java, procedures em Oracle e Sybase e sustentação em ambiente corporativo.</p>
-              <p class="t--en">Critical fleet and payment systems built with PHP, ColdFusion and Java, Oracle and Sybase stored procedures, and enterprise maintenance.</p>
+              <p class="t--pt">Sistemas críticos de gestão de frotas e pagamentos — sustentação, Kanban, Azure DevOps e acessibilidade web.</p>
+              <p class="t--en">Critical fleet and payment systems — maintenance, Kanban, Azure DevOps and web accessibility.</p>
+            </article>
+
+            <article class="project-card project-card--freelance">
+              <span class="project-badge project-badge--freelance">2023 · Freelance</span>
+              <h3>CNPJ · ETL Receita Federal</h3>
+              <div class="tag-row"><span class="pill">Python</span><span class="pill">MySQL</span><span class="pill">ETL</span></div>
+              <p class="t--pt">Automação em Python para download, processamento em lotes e carga dos dados públicos de CNPJ em MySQL.</p>
+              <p class="t--en">Python automation to download, batch-process and load public CNPJ data into MySQL.</p>
+            </article>
+
+            <article class="project-card project-card--oss">
+              <span class="project-badge">2026 · Open Source</span>
+              <h3>IBGE Localidades</h3>
+              <div class="tag-row"><span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Vite</span><span class="pill">IBGE API</span><span class="pill">Docker</span></div>
+              <p class="t--pt">Frontend React para a API de Localidades do IBGE — navegação hierárquica por regiões, UFs e municípios com tipos TypeScript e deploy Docker/nginx.</p>
+              <p class="t--en">React frontend for the IBGE Localities API — hierarchical navigation across regions, states and municipalities with TypeScript types and Docker/nginx deploy.</p>
+              <ul class="project-features t--pt">
+                <li>Cliente tipado para <code>servicodados.ibge.gov.br</code></li>
+                <li>Rotas: regiões → estados → municípios</li>
+              </ul>
+              <ul class="project-features t--en">
+                <li>Typed client for <code>servicodados.ibge.gov.br</code></li>
+                <li>Routes: regions → states → municipalities</li>
+              </ul>
+              <a href="https://github.com/tofariasti/ibge-localidades" class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer"><span class="t--pt">Código</span><span class="t--en">Code</span></a>
             </article>
 
             <article class="project-card project-card--oss">

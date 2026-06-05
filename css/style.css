@@ -1179,6 +1179,24 @@ body.lang-pt .timeline-en {
   letter-spacing: 0.05em;
 }
 
+.project-badge--freelance {
+  color: #c4b5fd;
+}
+
+.project-card--freelance {
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+.project-card--freelance:hover {
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 20px 48px rgba(168, 85, 247, 0.12);
+}
+
+.project-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
 .project-card p {
   color: var(--text-muted);
   font-size: 0.88rem;
