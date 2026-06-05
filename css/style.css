@@ -1060,6 +1060,41 @@ body.lang-pt .timeline-en {
   font-weight: 700;
 }
 
+.pill--freelance {
+  background: rgba(168, 85, 247, 0.18);
+  color: #c4b5fd;
+  border-color: rgba(168, 85, 247, 0.4);
+  font-weight: 700;
+}
+
+.timeline--freelance {
+  border-left-color: rgba(168, 85, 247, 0.4);
+}
+
+.timeline--freelance .timeline-item::before {
+  background: #a855f7;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.65);
+}
+
+.timeline--freelance .timeline-item.is-visible::before {
+  animation: timelinePulseFreelance 2.5s ease-in-out infinite;
+}
+
+@keyframes timelinePulseFreelance {
+  0%, 100% { box-shadow: 0 0 12px rgba(168, 85, 247, 0.65); }
+  50% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.85), 0 0 32px rgba(168, 85, 247, 0.3); }
+}
+
+.timeline-context a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.timeline-context a:hover {
+  color: var(--accent-2);
+}
+
 .timeline-bullets {
   list-style: disc;
   padding-left: 1.25rem;
@@ -1804,7 +1839,8 @@ body.cookie-modal-open {
   .hero-photo-wrap,
   .hero-glow,
   .btn--cv,
-  .timeline-item.is-visible::before {
+  .timeline-item.is-visible::before,
+  .timeline--freelance .timeline-item.is-visible::before {
     animation: none;
   }
 
