@@ -6,8 +6,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const assetsDir = path.join(__dirname, 'assets');
 
 const arquivos = [
-  { html: 'curriculo.html',                    pdf: 'curriculo.pdf' },
-  { html: 'curriculo-sem-freelance.html',      pdf: 'curriculo-sem-freelance.pdf' },
   { html: 'curriculo-ats.html',                pdf: 'curriculo-ats.pdf' },
   { html: 'curriculo-ats-sem-freelance.html',  pdf: 'curriculo-ats-sem-freelance.pdf' },
 ];
