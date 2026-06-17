@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiago O. de Farias — Currículo</title>
+  <!--
+    VERSÃO ATS / GOOGLE DOCS
+    ────────────────────────
+    Layout completamente linear, sem grid, sem flexbox, sem caixas coloridas.
+    Para importar no Google Docs: abra no navegador → Ctrl+A → Ctrl+C → cole no Google Docs.
+    Para gerar PDF ATS-safe: Arquivo → Imprimir → Salvar como PDF (margem: padrão).
+  -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11.5pt;
+      line-height: 1.6;
+      max-width: 820px;
+      margin: 36px auto;
+      color: #1a1a1a;
+      padding: 0 24px;
+    }
+
+    h1 {
+      font-size: 22pt;
+      margin: 0 0 4px;
+    }
+
+    .subtitle {
+      font-size: 13pt;
+      font-weight: bold;
+      margin: 0 0 6px;
+    }
+
+    .contact {
+      font-size: 10pt;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 11pt;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 3px;
+      margin: 26px 0 12px;
+    }
+
+    h3 {
+      font-size: 11.5pt;
+      margin: 0 0 2px;
+    }
+
+    .job-meta {
+      font-size: 10pt;
+      color: #444;
+      margin: 1px 0;
+    }
+
+    .stack-line {
+      font-size: 10pt;
+      color: #333;
+      margin: 6px 0 8px;
+    }
+
+    ul {
+      margin: 4px 0 0 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+      font-size: 11pt;
+    }
+
+    .job-block {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .job-block:last-child {
+      border-bottom: none;
+    }
+
+    .edu-item,
+    .cert-item {
+      margin-bottom: 10px;
+      font-size: 11pt;
+    }
+
+    p {
+      margin: 0 0 8px;
+    }
+
+    @media print {
+      body {
+        margin: 16px auto;
+        font-size: 10.5pt;
+      }
+
+      .job-block {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Tiago O. de Farias</h1>
+  <p class="subtitle">Desenvolvedor Backend Sênior</p>
+  <div class="contact">
+    Porto Alegre/RS &nbsp;|&nbsp; (51) 9 8903-0405 &nbsp;|&nbsp; tiago.farias.poa@gmail.com<br>
+    LinkedIn: linkedin.com/in/tiago-farias1985 &nbsp;|&nbsp; GitHub: github.com/tofariasti
+  </div>
+
+  <!-- ═══════════════════════════════════════════ RESUMO ═══ -->
+
+  <h2>Resumo Profissional</h2>
+
+  <p>Desenvolvedor Backend Sênior com mais de 10 anos de experiência em PHP e Laravel, especializado na construção e evolução de APIs REST, integrações entre sistemas e aplicações corporativas de missão crítica.</p>
+
+  <p>Experiência com arquitetura orientada a domínio, modelagem de dados, filas, workers, processamento assíncrono e mensageria utilizando Redis com Laravel Horizon, AWS SQS e RabbitMQ, aplicando a tecnologia mais adequada ao contexto técnico, operacional e de infraestrutura de cada projeto.</p>
+
+  <p>Forte atuação com boas práticas de engenharia de software, incluindo Clean Code, DDD, SOLID, YAGNI, padronização com PSRs, separação de responsabilidades, baixo acoplamento, alta coesão, legibilidade, manutenibilidade e evolução sustentável de código.</p>
+
+  <p>Vivência com autenticação corporativa SSO/SAML2, Microsoft Azure AD, Laravel Sanctum, observabilidade, testes automatizados, sustentação de sistemas legados, integrações com Salesforce CRM, APIs externas, AWS, MySQL, MongoDB e Oracle. Experiência recente em projeto mobile 100% Offline First com backend Laravel preparado para sincronização de dados, operação em campo e conectividade limitada.</p>
+
+  <!-- ═══════════════════════════════════════ COMPETÊNCIAS ═══ -->
+
+  <h2>Competências Técnicas</h2>
+
+  <p><strong>Linguagens:</strong> PHP, Python, JavaScript, Java, ColdFusion</p>
+  <p><strong>Frameworks:</strong> Laravel, Django, Lumen, CakePHP, CodeIgniter, Zend Framework, Doctrine, Livewire, Filament, Flutter</p>
+  <p><strong>APIs e Integrações:</strong> REST, SOAP, JSON:API, JWT, OAuth2, Salesforce CRM (SOQL, OAuth2 JWT), Atfarm API, AnyMarket, RD Station, ExactSales, Gryfo (biometria facial)</p>
+  <p><strong>Filas e Mensageria:</strong> Redis, Laravel Horizon, AWS SQS, RabbitMQ, Laravel Queues, Workers</p>
+  <p><strong>Bancos de Dados:</strong> MySQL, MongoDB, Oracle, Sybase, SQL Server, PostgreSQL, Django ORM</p>
+  <p><strong>Autenticação e Segurança:</strong> SSO, SAML2, Microsoft Azure AD, Laravel Sanctum, OAuth2</p>
+  <p><strong>Cloud e Infraestrutura:</strong> AWS (EC2, RDS, SQS), GitLab, Azure DevOps, Jenkins</p>
+  <p><strong>Qualidade e Testes:</strong> DDD, Clean Code, SOLID, YAGNI, PSRs, PHPStan, Larastan, Pest, Pint, PHP Insights, Cypress, Behat, JMeter, CaptainHook</p>
+  <p><strong>Observabilidade:</strong> Laravel Telescope, Laravel Pulse, Spatie Health, Log Viewer, Laravel Horizon</p>
+  <p><strong>Metodologias:</strong> Kanban, Sprint Planning, BPMN, TDD, BDD, Code Review, Offline First, Multi-tenant</p>
+
+  <!-- ═══════════════════════════════════════ EXPERIÊNCIA ═══ -->
+
+  <h2>Experiência Profissional</h2>
+
+  <div class="job-block">
+    <h3>Desenvolvedor Backend Sênior</h3>
+    <p class="job-meta">AP Digital Services · Alocação em Yara Brasil &nbsp;|&nbsp; 04/2024 – Atual</p>
+    <p class="job-meta">Fertilizantes, nutrição para plantas e consultoria agrícola</p>
+    <p class="stack-line"><strong>Stack:</strong> Laravel, DDD, Clean Code, SOLID, PSRs, Flutter Mobile, Salesforce CRM, Redis, Laravel Horizon, Laravel Pulse, SSO, SAML2, Microsoft Azure AD, Sanctum, Testes E2E</p>
+    <ul>
+      <li>Atuação em sistema crítico de consultoria agrícola, com construção e evolução de API REST versionada em Laravel para aplicação mobile em Flutter.</li>
+      <li>Desenvolvimento de backend preparado para projeto mobile 100% Offline First, suportando sincronização posterior de dados, operação em campo, consistência das informações e continuidade em áreas remotas.</li>
+      <li>Aplicação de arquitetura orientada a domínio DDD, práticas de Clean Code, princípios SOLID, YAGNI e padronização PSRs, com foco em baixo acoplamento, alta coesão, legibilidade e manutenibilidade.</li>
+      <li>Planejamento técnico da migração de Laravel 10 para Laravel 12, avaliando impactos em bootstrap, middleware, providers, exceptions, dependências e compatibilidade de pacotes.</li>
+      <li>Desenvolvimento de integrações backend entre sistemas internos, Salesforce CRM e APIs externas, incluindo cotação do dólar, dados climáticos e Atfarm API.</li>
+      <li>Implementação de mais de 11 pipelines de importação assíncrona integrados ao Salesforce CRM, utilizando OAuth2 JWT, SOQL, jobs Laravel, filas, workers e processamento em background para sincronização de dados corporativos.</li>
+      <li>Utilização de Redis como backend de filas e cache, com Laravel Horizon para monitoramento de jobs, filas, workers, throughput, tentativas, falhas e reprocessamento.</li>
+      <li>Adoção de Redis com Laravel Horizon em vez de RabbitMQ por alinhamento com a stack nativa do Laravel, menor complexidade operacional e melhor aproveitamento da infraestrutura existente.</li>
+      <li>Configuração de stack de observabilidade com Telescope, Laravel Pulse, Horizon, Spatie Health, Log Viewer e alertas automáticos no Microsoft Teams para falhas críticas, exceptions e erros HTTP 5xx.</li>
+      <li>Implementação de autenticação corporativa com SSO via SAML2 contra Microsoft Azure AD, utilizando o pacote aacotroneo/laravel-saml2.</li>
+      <li>Configuração do fluxo SAML entre a aplicação Laravel e o Azure AD, incluindo Service Provider, metadata, Entity ID, ACS URL, certificados, atributos de usuário e callback de autenticação.</li>
+      <li>Integração do SSO com a base de usuários da aplicação, combinando autenticação corporativa, controle de acesso interno, sessões autenticadas e autenticação dupla com Laravel Sanctum.</li>
+      <li>Desenvolvimento de painel administrativo com Filament v3 e Livewire para gestão de clientes, contatos, atividades, campanhas e precificação.</li>
+      <li>Aplicação de testes automatizados, incluindo testes E2E, com Larastan, PHPStan, Pest, Pint, PHP Insights e CaptainHook.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor Backend Freelancer</h3>
+    <p class="job-meta">Corrige Aí (corrigeai.com) &nbsp;|&nbsp; 04/2025 – 06/2025</p>
+    <p class="job-meta">Reconstrução arquitetural de API REST em Laravel 10, DDD, Filament, filas assíncronas com AWS SQS e frontend React — realizado em horário oposto às atividades principais</p>
+    <p class="stack-line"><strong>Stack:</strong> Laravel 10, API REST, DDD, Clean Code, SOLID, YAGNI, PSRs, Laravel Filament, Queues, Workers, AWS SQS, AWS, React</p>
+    <ul>
+      <li>Reconstrução do backend em Laravel 10 com menor acoplamento entre controllers, regras de negócio, persistência e integrações externas.</li>
+      <li>Aplicação de Domain-Driven Design, Clean Code, SOLID, YAGNI e PSRs, separando domínio, aplicação, infraestrutura e interface HTTP.</li>
+      <li>Estruturação da API REST para consumo pelo frontend em React, padronizando contratos de entrada e saída, validações e tratamento de erros.</li>
+      <li>Implementação de filas assíncronas com AWS SQS e workers Laravel para processamento em background, aumentando escalabilidade, resiliência e confiabilidade.</li>
+      <li>Adoção do AWS SQS em vez de RabbitMQ por ser serviço gerenciado da AWS, eliminando a necessidade de manutenção de infraestrutura própria de mensageria.</li>
+      <li>Utilização do Laravel Filament para criação de painéis administrativos e telas internas de gestão.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor Backend Freelancer</h3>
+    <p class="job-meta">SISBAP (sisbap.com.br) &nbsp;|&nbsp; 01/2025 – 03/2025</p>
+    <p class="job-meta">Manutenção evolutiva em sistema multi-tenant Python/Django, frontend React, rotinas assíncronas e MySQL — realizado em horário oposto às atividades principais</p>
+    <p class="stack-line"><strong>Stack:</strong> Python, Django, Multi-tenant, Django ORM, Filas, Jobs, Workers, React, MySQL</p>
+    <ul>
+      <li>Manutenção evolutiva no sistema SISBAP, aplicação corporativa em Python/Django com arquitetura multi-tenant e banco de dados MySQL.</li>
+      <li>Implementação e evolução de rotinas assíncronas com filas, jobs e workers no backend Django.</li>
+      <li>Adequação das rotinas assíncronas ao contexto multi-tenant, garantindo isolamento dos dados por cliente/tenant.</li>
+      <li>Criação e evolução de templates de laudos no backend Django, com foco em padronização e consistência na geração dos documentos.</li>
+      <li>Ajustes na integração entre backend Django, MySQL e frontend React.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor PHP</h3>
+    <p class="job-meta">Stargrid &nbsp;|&nbsp; 11/2020 – 03/2024</p>
+    <p class="job-meta">Plataforma SaaS healthtech para gestão de escalas hospitalares</p>
+    <p class="stack-line"><strong>Stack:</strong> Laravel, RabbitMQ, AWS (EC2, RDS), APIs REST, MySQL, MongoDB, Cypress, Behat, PHP Insights</p>
+    <ul>
+      <li>Atuação no core de uma plataforma SaaS healthtech, com foco em alta disponibilidade e sustentação de operação crítica.</li>
+      <li>Desenvolvimento e manutenção de APIs REST com PHP e Laravel, com persistência híbrida em MySQL e MongoDB.</li>
+      <li>Implementação e manutenção de processamento assíncrono com RabbitMQ, desacoplando tarefas demoradas do fluxo principal e melhorando a performance da plataforma.</li>
+      <li>Controle de workers, tratamento de mensagens com falha e reprocessamento de tarefas em produção.</li>
+      <li>Estruturação de testes automatizados com Cypress e Behat, e apoio à qualidade contínua com PHP Insights e code review.</li>
+      <li>Apoio em infraestrutura AWS com EC2 e RDS, versionamento via GitLab e colaboração técnica com o time.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor de Software Laravel — Freelancer</h3>
+    <p class="job-meta">WK Technology · Projeto para Detran/PR &nbsp;|&nbsp; 03/2021 – 09/2021</p>
+    <p class="job-meta">API REST em Laravel com integração de reconhecimento facial Gryfo para controle de presença em aulas remotas — realizado em horário oposto às atividades principais</p>
+    <p class="stack-line"><strong>Stack:</strong> Laravel, REST API, Gryfo, Biometria Facial, Integrações</p>
+    <ul>
+      <li>Backend em Laravel para registrar e auditar presença de alunos em aulas remotas de autoescolas credenciadas ao Detran/PR.</li>
+      <li>Desenvolvimento de API REST com endpoints para alunos, turmas/aulas, sessões remotas e registro de presença.</li>
+      <li>Integração com a plataforma Gryfo de reconhecimento facial: envio de dados biométricos, recebimento do resultado e vínculo ao aluno e à aula.</li>
+      <li>Tratamento de falhas, reprocessamento e histórico de presença para rastreabilidade e auditoria.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor Backend Freelancer — Automação ETL</h3>
+    <p class="job-meta">Escritório de advocacia &nbsp;|&nbsp; 2023 · 2 meses</p>
+    <p class="job-meta">Automação em Python para download, processamento e carga dos dados públicos de CNPJ da Receita Federal em MySQL — realizado em horário oposto às atividades principais</p>
+    <p class="stack-line"><strong>Stack:</strong> Python, MySQL, ETL, Automação, Processamento em Lote, Dados Públicos CNPJ</p>
+    <ul>
+      <li>Automação em Python para baixar, organizar, processar e importar dados públicos de CNPJ da Receita Federal.</li>
+      <li>Estratégia de processamento em lotes, leitura incremental e inserções em massa, evitando carregar grandes volumes em memória.</li>
+      <li>Fluxo ETL com etapas de download, extração, normalização, validação, transformação e persistência em MySQL.</li>
+      <li>Mecanismos de retomada em caso de falha, com logs de execução e controle de progresso por arquivo.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor PHP</h3>
+    <p class="job-meta">DBC Company · Alocação em SouLog / Goodmanager &nbsp;|&nbsp; 05/2020 – 10/2020</p>
+    <p class="job-meta">Plataforma corporativa para gestão de processos de licitações</p>
+    <p class="stack-line"><strong>Stack:</strong> PHP, Oracle, Sybase, Sistemas Corporativos, Levantamento de Requisitos</p>
+    <ul>
+      <li>Evolução do Goodmanager, plataforma corporativa para gestão de processos de licitações.</li>
+      <li>Levantamento de requisitos e desenvolvimento de funcionalidades em backend, frontend e banco de dados.</li>
+      <li>Atuação com Oracle e Sybase em contexto corporativo, apoiando consultas, manutenção e regras de negócio.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor PHP Freelancer</h3>
+    <p class="job-meta">Base em Tecnologia · Brondani Auto Peças · Profissionais SA &nbsp;|&nbsp; 06/2020 – 10/2020</p>
+    <p class="job-meta">Integrações, manutenção de sites, CRM e APIs para e-commerce automotivo — realizado em horário oposto às atividades principais</p>
+    <p class="stack-line"><strong>Stack:</strong> PHP, CodeIgniter, APIs REST, SOAP, AnyMarket, RD Station, ExactSales</p>
+    <ul>
+      <li>Manutenção de sites e integração com API AnyMarket para e-commerce automotivo.</li>
+      <li>Desenvolvimento de integração para consulta de peças automotivas via APIs REST e SOAP.</li>
+      <li>Adequação de CRM em CodeIgniter e integração com RD Station e ExactSales.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor Backend</h3>
+    <p class="job-meta">DBC Company · Alocação em Ticket Log &nbsp;|&nbsp; 05/2018 – 06/2020</p>
+    <p class="job-meta">Sistemas corporativos para gestão de frotas, meios de pagamento, integrações internas e sustentação de aplicações críticas</p>
+    <p class="stack-line"><strong>Stack:</strong> PHP, ColdFusion, Java, Oracle, Sybase, Kanban, Sprint Planning, Azure DevOps, Acessibilidade Web</p>
+    <ul>
+      <li>Atuação em ambiente corporativo de alta criticidade na Ticket Log, empresa do segmento de gestão de frotas, abastecimento, manutenção veicular e meios de pagamento.</li>
+      <li>Desenvolvimento, manutenção evolutiva e sustentação de sistemas internos com PHP, ColdFusion e Java.</li>
+      <li>Atuação com bancos Oracle e Sybase, criando e mantendo queries, procedures, ajustes de performance e validação de dados.</li>
+      <li>Participação em rotina ágil com Kanban, sprint planning, refinamentos, estimativas e alinhamento técnico com o time.</li>
+      <li>Utilização de Azure DevOps para gestão de backlog, registro de bugs, documentação e acompanhamento de demandas.</li>
+      <li>Apoio à sustentação de sistemas críticos, investigação de incidentes, análise de logs e correção de falhas.</li>
+      <li>Participação em projeto de adequação web às diretrizes de acessibilidade com HTML5, NVDA, eMAG e Google Lighthouse.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Desenvolvedor PHP</h3>
+    <p class="job-meta">RZ2 Sistemas de Gestão &nbsp;|&nbsp; 07/2017 – 04/2018</p>
+    <p class="job-meta">APIs REST, serviços backend e integração de sistemas</p>
+    <p class="stack-line"><strong>Stack:</strong> PHP, Lumen, Doctrine, APIs REST, JWT, JSON:API, Jenkins, JMeter</p>
+    <ul>
+      <li>Desenvolvimento de APIs REST com CORS e JWT seguindo a especificação JSON:API.</li>
+      <li>Utilização de Lumen e Doctrine na construção de serviços backend.</li>
+      <li>Implementação de testes de integração, apoio em deploy com Jenkins e testes de carga com JMeter.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Analista Desenvolvedor PHP</h3>
+    <p class="job-meta">AdvancedIT · Alocação em Inmetro &nbsp;|&nbsp; 03/2015 – 05/2017</p>
+    <p class="job-meta">Projeto Cronotacógrafo — sistema nacional de controle e gestão metrológica (cronotacografo.rbmlq.gov.br)</p>
+    <p class="stack-line"><strong>Stack:</strong> PHP, CakePHP, Oracle, Sistema Governamental, Metrologia Legal, BPMN, Bizagi</p>
+    <ul>
+      <li>Atuação no Projeto Cronotacógrafo, sistema utilizado no contexto do Inmetro e da Rede Brasileira de Metrologia Legal e Qualidade.</li>
+      <li>Desenvolvimento e manutenção de funcionalidades em sistema web governamental, apoiando fluxos de ensaios, verificações, emissão de documentos e acompanhamento de processos.</li>
+      <li>Desenvolvimento backend com PHP e CakePHP, implementando regras de negócio relacionadas ao processo regulatório.</li>
+      <li>Atuação com banco de dados Oracle: consultas, manutenção de estruturas e apoio à integridade das informações.</li>
+      <li>Levantamento e análise de requisitos, traduzindo necessidades operacionais e regras regulatórias em funcionalidades sistêmicas.</li>
+      <li>Mapeamento de processos de negócio com BPMN utilizando Bizagi.</li>
+    </ul>
+  </div>
+
+  <div class="job-block">
+    <h3>Experiências Anteriores</h3>
+    <p class="job-meta">Construtora Pelotense · Constat · EMATER/ASCAR · CWI &nbsp;|&nbsp; 2011 – 2015</p>
+    <p class="job-meta">Sistemas web internos, integrações corporativas, manutenção de aplicações e suporte técnico</p>
+    <p class="stack-line"><strong>Stack:</strong> PHP, Laravel, CodeIgniter, Zend Framework, .NET, SQL Server, MySQL, Oracle, Java, Linux</p>
+    <ul>
+      <li>Desenvolvimento de sistemas web internos, integrações com bases corporativas, manutenção de aplicações e suporte técnico.</li>
+      <li>Vivência em levantamento de requisitos, TDD, documentação técnica, ambiente Linux e projetos corporativos.</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════ FORMAÇÃO ═══ -->
+
+  <h2>Formação Acadêmica</h2>
+
+  <div class="edu-item">
+    <strong>Pós-Graduação em Sistemas de Informação com Métodos Ágeis</strong><br>
+    UniRitter &nbsp;|&nbsp; 2014 – 2016<br>
+    Artigo: Aplicação de Domain-Driven Design no Gerenciamento de GRU de Cronotacógrafo no Inmetro/RS
+  </div>
+
+  <div class="edu-item">
+    <strong>Graduação em Análise e Desenvolvimento de Sistemas</strong><br>
+    Faculdades QI &nbsp;|&nbsp; 2010 – 2013
+  </div>
+
+  <div class="edu-item">
+    <strong>Técnico em Informática</strong><br>
+    Faculdade QI &nbsp;|&nbsp; 2008 – 2010
+  </div>
+
+  <!-- ═══════════════════════════════════════ CURSOS ═══ -->
+
+  <h2>Cursos e Certificações</h2>
+
+  <div class="cert-item">Flutter para Android e iOS &nbsp;|&nbsp; Udemy &nbsp;|&nbsp; 07/2025 &nbsp;|&nbsp; 60 horas</div>
+  <div class="cert-item">Python 3: do básico ao avançado &nbsp;|&nbsp; Udemy &nbsp;|&nbsp; 11/2020</div>
+  <div class="cert-item">iMasters Certified Professional – PHP Boas Práticas &nbsp;|&nbsp; 04/2017</div>
+  <div class="cert-item">BDD - Testes Guiados por Comportamento com Behat PHP &nbsp;|&nbsp; TreinaWeb &nbsp;|&nbsp; 09/2017</div>
+  <div class="cert-item">Zend Expressive - Microframework PHP &nbsp;|&nbsp; TreinaWeb &nbsp;|&nbsp; 08/2017</div>
+  <div class="cert-item">PostgreSQL - Desenvolvedor / DBA &nbsp;|&nbsp; TreinaWeb &nbsp;|&nbsp; 2017</div>
+
+</body>
+</html>
