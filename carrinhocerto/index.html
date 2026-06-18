@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarrinhoCerto — Listas de mercado, scan e gastos para família</title>
+  <meta name="description" content="App Android para listas de compras com memória de produtos, scan de código de barras, controle de gastos e sync familiar opcional. Offline-first com SQLite local.">
+  <meta name="theme-color" content="#2BB876">
+  <meta property="og:title" content="CarrinhoCerto — Compre certo no mercado, em família">
+  <meta property="og:description" content="Listas inteligentes, scan no corredor, gastos mensais e sync em tempo real entre celulares da família.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="screenshots/listas.png?v=5">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/landing.css?v=6">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand">
+        <img src="assets/icon.png" alt="CarrinhoCerto" width="34" height="34">
+        CarrinhoCerto
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#problema">Problema</a></li>
+          <li><a href="#fluxo">Fluxo</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#instalar">Instalar</a></li>
+        </ul>
+      </nav>
+      <a href="#instalar" class="btn btn-primary btn-sm">Em breve na Play Store</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-badge"><span class="dot"></span> Android · Offline-first · Sync família opcional</span>
+          <h1>O mercado da família precisa de <span class="highlight">memória</span>, não de adivinhação</h1>
+          <p class="hero-lead">
+            Uma pessoa sabe as marcas. A outra vai sozinha e compra errado.
+            O CarrinhoCerto registra <strong>o que foi realmente comprado</strong> — marca, embalagem, preço —
+            gera listas precisas, diagnostica gastos e, quando configurado, sincroniza tudo em tempo real entre os celulares da família.
+          </p>
+          <div class="hero-cta">
+            <a href="#fluxo" class="btn btn-primary">Ver como resolve</a>
+            <a href="https://github.com/tofariasti/carrinhocerto" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <div class="value">Scan EAN</div>
+              <div class="label">Código de barras no corredor</div>
+            </div>
+            <div class="metric">
+              <div class="value">SQLite</div>
+              <div class="label">Funciona sem internet</div>
+            </div>
+            <div class="metric">
+              <div class="value">Realtime</div>
+              <div class="label">Lista ativa entre aparelhos</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-frame">
+            <div class="phone-glow"></div>
+            <div class="phone-screen">
+              <img src="screenshots/listas.png?v=5" alt="Listas de compras com atalho Estou no mercado" width="390" height="844" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem" id="problema">
+      <div class="container">
+        <div class="problem-header">
+          <p class="section-label">O problema</p>
+          <h2 class="section-title">A lista diz &ldquo;leite&rdquo;. A prateleira tem 40 opções.</h2>
+          <p class="section-subtitle">
+            Em casais e famílias, o conhecimento sobre marcas, tamanhos e substitutos fica na cabeça de uma pessoa.
+            Quando outra vai ao mercado sozinha, o fluxo quebra — e o controle de gastos junto.
+          </p>
+        </div>
+
+        <div class="problem-split">
+          <article class="problem-box bad">
+            <span class="tag">Sem memória</span>
+            <h3>O que acontece hoje</h3>
+            <ul class="pain-list">
+              <li>
+                <span class="icon">✕</span>
+                <span>Lista genérica sem marca, embalagem ou substituto aceito</span>
+              </li>
+              <li>
+                <span class="icon">✕</span>
+                <span>Quem vai ao mercado liga ou manda áudio para confirmar cada item</span>
+              </li>
+              <li>
+                <span class="icon">✕</span>
+                <span>Só registra o planejado — não o que foi efetivamente comprado</span>
+              </li>
+              <li>
+                <span class="icon">✕</span>
+                <span>Gastos com mercado imprecisos, sem histórico de preços</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="problem-box good">
+            <span class="tag">Com CarrinhoCerto</span>
+            <h3>O que o app resolve</h3>
+            <ul class="pain-list">
+              <li>
+                <span class="icon">✓</span>
+                <span>Catálogo privado com marca, foto e código de barras de cada produto</span>
+              </li>
+              <li>
+                <span class="icon">✓</span>
+                <span>Lista compartilhada com notas: &ldquo;Piracanjuba; se não tiver, Parmalat&rdquo;</span>
+              </li>
+              <li>
+                <span class="icon">✓</span>
+                <span>Registro real da compra via scan — preço, quantidade e embalagem</span>
+              </li>
+              <li>
+                <span class="icon">✓</span>
+                <span>Gráficos mensais, orçamento e comparação de gastos com mercado</span>
+              </li>
+              <li>
+                <span class="icon">✓</span>
+                <span>Sync familiar opcional: lista ativa em tempo real entre até 5 pessoas</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="flowchart" id="fluxo">
+      <div class="container">
+        <div class="flowchart-header">
+          <p class="section-label">Fluxo da solução</p>
+          <h2 class="section-title">Do problema ao diagnóstico em um ciclo contínuo</h2>
+          <p class="section-subtitle">
+            O CarrinhoCerto conecta quem planeja e quem executa — cada compra alimenta a próxima lista e os gráficos de gasto.
+          </p>
+        </div>
+
+        <div class="flow-diagram">
+          <div class="flow-lane lane-problem">
+            <div class="flow-lane-title">
+              <span class="lane-badge">Problema</span>
+              <h3>Fluxo sem memória estruturada</h3>
+            </div>
+            <div class="flow-nodes">
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">📝</div>
+                  <h4>Lista genérica</h4>
+                  <p>&ldquo;leite, arroz, detergente&rdquo;</p>
+                  <span class="node-code">sem contexto</span>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">🛒</div>
+                  <h4>Sozinho no mercado</h4>
+                  <p>Executor sem saber qual pegar</p>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">❓</div>
+                  <h4>Dúvida na prateleira</h4>
+                  <p>Liga, manda áudio ou chuta</p>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">⚠️</div>
+                  <h4>Produto errado</h4>
+                  <p>Marca, tamanho ou tipo incorreto</p>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">📉</div>
+                  <h4>Sem diagnóstico</h4>
+                  <p>Gastos imprecisos, sem histórico</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-divider">CarrinhoCerto quebra o ciclo</div>
+
+          <div class="flow-lane lane-solution">
+            <div class="flow-lane-title">
+              <span class="lane-badge">Solução</span>
+              <h3>Fluxo com memória de execução</h3>
+            </div>
+            <div class="flow-nodes">
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">👤</div>
+                  <h4>Planejador</h4>
+                  <p>Monta lista do histórico com notas de preferência</p>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">📤</div>
+                  <h4>Compartilha</h4>
+                  <p>WhatsApp, PDF ou sync na nuvem da família</p>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">👨‍👩‍👧</div>
+                  <h4>Household</h4>
+                  <p>Convite por código · lista ativa em realtime</p>
+                  <span class="node-code">opcional</span>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">📷</div>
+                  <h4>Scan no corredor</h4>
+                  <p>EAN + preço + foto da embalagem</p>
+                  <span class="node-code">modo mercado</span>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">🗄️</div>
+                  <h4>Memória híbrida</h4>
+                  <p>SQLite local + Supabase quando configurado</p>
+                </div>
+              </div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-node">
+                <div class="flow-node-inner">
+                  <div class="node-icon">📊</div>
+                  <h4>Próximo ciclo</h4>
+                  <p>Nova lista inteligente + gráficos de gasto</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-outcome">
+            <div class="outcome-card">
+              <div class="num">01</div>
+              <h4>Memória de execução</h4>
+              <p>Registra o comprado, não só o planejado</p>
+            </div>
+            <div class="outcome-card">
+              <div class="num">02</div>
+              <h4>Lista flexível</h4>
+              <p>Gera do histórico, edita livremente</p>
+            </div>
+            <div class="outcome-card">
+              <div class="num">03</div>
+              <h4>Diagnóstico financeiro</h4>
+              <p>Totais, tendências e top produtos</p>
+            </div>
+            <div class="outcome-card">
+              <div class="num">04</div>
+              <h4>Sync familiar</h4>
+              <p>Offline-first com nuvem opcional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars">
+      <div class="container">
+        <p class="section-label">Arquitetura da solução</p>
+        <h2 class="section-title">Quatro capacidades, um único fluxo</h2>
+        <p class="section-subtitle">Projetado para quem monta a lista em casa e quem executa no mercado — com ou sem sync na nuvem.</p>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-num">// memoria_execucao</div>
+            <h3>Memória de execução</h3>
+            <p>Cada scan grava marca, embalagem, preço unitário e foto. Na próxima ida, qualquer pessoa sabe exatamente o que pegar.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-num">// lista_flexivel</div>
+            <h3>Lista flexível</h3>
+            <p>Gere a partir da última compra ou dos itens recorrentes. Notas por item, estimativa de custo e compartilhamento por WhatsApp ou PDF.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-num">// diagnostico</div>
+            <h3>Diagnóstico de gastos</h3>
+            <p>Total mensal, ticket médio, orçamento, comparação com mês anterior, gasto por categoria e ranking dos produtos que mais pesam.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-num">// sync_familia</div>
+            <h3>Sync familiar</h3>
+            <p>Entre com Google, crie ou entre na família por código de convite. Sync offline-first e itens da lista ativa aparecem em tempo real nos outros aparelhos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="recursos">
+      <div class="container">
+        <div class="features-header">
+          <p class="section-label">Interface</p>
+          <h2 class="section-title">Projetado para o corredor do mercado</h2>
+        </div>
+
+        <div class="feature-row">
+          <div class="feature-content">
+            <p class="feature-tag">listas</p>
+            <h3>Planeje e vá ao mercado</h3>
+            <p>Atalho &ldquo;Estou no mercado&rdquo; abre a compra com scan. Crie listas do zero, do histórico ou só com itens recorrentes.</p>
+            <ul class="feature-list">
+              <li>Lista ativa com estimativa de custo</li>
+              <li>Status rascunho, ativa ou concluída</li>
+              <li>Compartilhe por WhatsApp ou PDF</li>
+            </ul>
+          </div>
+          <div class="feature-phone">
+            <div class="phone-screen">
+              <img src="screenshots/listas.png?v=5" alt="Listas de compras" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="feature-content">
+            <p class="feature-tag">modo_mercado</p>
+            <h3>Scan de código de barras</h3>
+            <p>No corredor, escaneie o EAN para registrar marca, quantidade e preço. Anexe fotos e notas de substituição por item.</p>
+            <ul class="feature-list">
+              <li>Leitura EAN/UPC pela câmera</li>
+              <li>Catálogo privado com fotos</li>
+              <li>Registro item a item, sem fricção</li>
+            </ul>
+          </div>
+          <div class="feature-phone">
+            <div class="phone-screen">
+              <img src="screenshots/compras.png?v=5" alt="Modo mercado com scan" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <div class="feature-content">
+            <p class="feature-tag">historico</p>
+            <h3>Histórico completo</h3>
+            <p>Cada ida ao mercado fica registrada com itens, preços e mercado. Filtre por loja e exporte CSV para planilha.</p>
+            <ul class="feature-list">
+              <li>Detalhe por produto com marca e embalagem</li>
+              <li>Compartilhe o resumo da compra</li>
+              <li>Gere nova lista a partir de qualquer compra</li>
+            </ul>
+          </div>
+          <div class="feature-phone">
+            <div class="phone-screen">
+              <img src="screenshots/historico.png?v=5" alt="Histórico de compras" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="feature-content">
+            <p class="feature-tag">gastos</p>
+            <h3>Diagnóstico financeiro</h3>
+            <p>Veja quanto gastou no mês, compare com o período anterior, acompanhe orçamento e descubra quais produtos mais impactam.</p>
+            <ul class="feature-list">
+              <li>Total mensal, ticket médio e meta de orçamento</li>
+              <li>Gráfico dos últimos 6 meses</li>
+              <li>Top produtos e gasto por categoria</li>
+            </ul>
+          </div>
+          <div class="feature-phone">
+            <div class="phone-screen">
+              <img src="screenshots/gastos.png?v=5" alt="Gráficos de gastos" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <div class="feature-content">
+            <p class="feature-tag">familia</p>
+            <h3>Sync entre celulares</h3>
+            <p>Entre com Google, crie uma família ou use o código de convite. Listas e histórico sincronizam com fila offline-first.</p>
+            <ul class="feature-list">
+              <li>Até 5 membros por household</li>
+              <li>Lista ativa atualiza em tempo real</li>
+              <li>Sync manual ou automático a cada 30 s</li>
+            </ul>
+          </div>
+          <div class="feature-phone">
+            <div class="phone-screen">
+              <img src="screenshots/familia.png?v=5" alt="Compartilhamento familiar com sync" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="feature-content">
+            <p class="feature-tag">ajustes</p>
+            <h3>Preferências e backup</h3>
+            <p>Idioma, unidades, metas de orçamento, backup ZIP local e entrada para gerenciar a família quando o Supabase está configurado.</p>
+            <ul class="feature-list">
+              <li>PT-BR, EN e ES</li>
+              <li>Exportar e restaurar backup completo</li>
+              <li>Massa de demonstração para testes</li>
+            </ul>
+          </div>
+          <div class="feature-phone">
+            <div class="phone-screen">
+              <img src="screenshots/configuracoes.png?v=5" alt="Ajustes e household" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="install" id="instalar">
+      <div class="container">
+        <div class="install-box">
+          <span class="install-badge">Em breve na Play Store</span>
+          <h2>Instale no Android</h2>
+          <p>
+            Gratuito, offline-first e open source. Dados no SQLite do celular; sync na nuvem é opcional (Supabase).
+            <strong>Disponível na Google Play Store em breve.</strong>
+          </p>
+
+          <div class="play-store-soon" aria-label="Em breve na Google Play Store">
+            <svg class="play-store-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5Z" fill="currentColor"/>
+              <path d="M16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12Z" fill="currentColor" opacity="0.85"/>
+              <path d="M20.16 10.81C20.5 11.08 20.75 11.51 20.75 12C20.75 12.49 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81Z" fill="currentColor" opacity="0.7"/>
+              <path d="M6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z" fill="currentColor" opacity="0.85"/>
+            </svg>
+            <div>
+              <strong>Google Play Store</strong>
+              <span>Publicação em andamento — avisaremos quando estiver no ar.</span>
+            </div>
+          </div>
+
+          <p class="install-dev-label">Para desenvolvedores e testadores antecipados</p>
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <code><span class="prompt">$</span> npm install</code>
+            <code><span class="prompt">$</span> npm run android:install</code>
+          </div>
+          <a href="https://github.com/tofariasti/carrinhocerto#instalar-no-celular-uso-real" class="btn btn-secondary" target="_blank" rel="noopener">
+            Instalar via USB (guia no GitHub)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Dúvidas comuns</h2>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>Precisa de internet no mercado?</h3>
+            <p>Não. O app funciona 100% offline. Scan, listas e histórico ficam no SQLite local. Sync na nuvem só quando você configura a família.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Como compartilho com a família?</h3>
+            <p>Em Ajustes → Gerenciar família, entre com Google e crie uma família ou use o código de convite. A lista ativa sincroniza em tempo real entre os aparelhos.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Funciona no iPhone?</h3>
+            <p>Por enquanto o foco é Android. iOS está planejado para fase futura.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Meus dados são privados?</h3>
+            <p>Sim. Por padrão tudo fica no celular. Se ativar sync, apenas membros da sua família acessam os dados via Supabase — sem venda de dados.</p>
+          </article>
+          <article class="faq-item">
+            <h3>É app de finanças pessoais?</h3>
+            <p>Não. Foco exclusivo em mercado: listas, memória de produtos e gastos com supermercado.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Preciso pagar para usar sync?</h3>
+            <p>O sync familiar está na Fase 2. Households novos recebem trial Pro de 14 dias; planos pagos entram quando a monetização for ativada na Play Store.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="brand">
+        <img src="assets/icon.png" alt="" width="28" height="28">
+        CarrinhoCerto
+      </div>
+      <p>
+        <a href="https://github.com/tofariasti/carrinhocerto">GitHub</a> ·
+        <a href="FASE2.md">Sync e família</a> ·
+        <a href="PLANEJAMENTO.md">Planejamento</a> ·
+        <a href="DESENVOLVIMENTO.md">Desenvolvimento</a> ·
+        <a href="privacidade.html">Privacidade</a>
+      </p>
+      <p style="margin-top: 12px;">© 2026 CarrinhoCerto · Open source</p>
+    </div>
+  </footer>
+</body>
+</html>
