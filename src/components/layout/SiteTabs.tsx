@@ -1,5 +1,6 @@
 import { NavLink as RouterNavLink } from 'react-router-dom'
 import type { SiteTab as SiteTabType } from '../../types/content'
+import { uiCopy } from '../../data/navigation'
 import { useLocale } from '../../context/LocaleContext'
 
 interface SiteTabsProps {
@@ -12,7 +13,7 @@ export function SiteTabs({ tabs, activeId, compact = false }: SiteTabsProps) {
   const { t } = useLocale()
 
   return (
-    <div className={`site-tabs${compact ? ' site-tabs--mobile' : ''}`} role="navigation" aria-label={t({ pt: 'Área do site', en: 'Site area' })}>
+    <div className={`site-tabs${compact ? ' site-tabs--mobile' : ''}`} role="navigation" aria-label={t(uiCopy.siteArea)}>
       {tabs.map((tab) => (
         <RouterNavLink
           key={tab.id}

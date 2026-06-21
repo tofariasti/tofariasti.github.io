@@ -1,9 +1,9 @@
 import type { Certification, EducationEntry } from '../types/content'
 
 export const educationSection = {
-  tag: { pt: 'Formação', en: 'Education' },
-  title: { pt: 'Formação e certificações', en: 'Education & certifications' },
-  certsTitle: { pt: 'Cursos e certificações', en: 'Courses & certifications' },
+  tag: { pt: 'Formação', en: 'Education', es: 'Formación' },
+  title: { pt: 'Formação e certificações', en: 'Education & certifications', es: 'Formación y certificaciones' },
+  certsTitle: { pt: 'Cursos e certificações', en: 'Courses & certifications', es: 'Cursos y certificaciones' },
 }
 
 export const education: EducationEntry[] = [
@@ -13,15 +13,18 @@ export const education: EducationEntry[] = [
     title: {
       pt: 'Pós-Graduação em Sistemas de Informação com Métodos Ágeis',
       en: 'Postgraduate in Information Systems with Agile Methods',
+      es: 'Posgrado en Sistemas de Información con Métodos Ágiles',
     },
     meta: 'UniRitter · 2014 – 2016',
     description: {
       pt: 'Práticas ágeis, Design Patterns, arquiteturas web e testes ágeis.',
       en: 'Agile practices, Design Patterns, web architectures and agile testing.',
+      es: 'Prácticas ágiles, Design Patterns, arquitecturas web y pruebas ágiles.',
     },
     article: {
       pt: 'Artigo: Aplicação de Domain-Driven Design no Gerenciamento de GRU de Cronotacógrafo no Inmetro/RS',
       en: 'Article: Applying Domain-Driven Design to chronotachograph GRU management at Inmetro/RS',
+      es: 'Artículo: Aplicación de Domain-Driven Design en la gestión de GRU de cronotacógrafo en Inmetro/RS',
     },
   },
   {
@@ -29,6 +32,7 @@ export const education: EducationEntry[] = [
     title: {
       pt: 'Graduação em Análise e Desenvolvimento de Sistemas',
       en: 'Bachelor in Systems Analysis and Development',
+      es: 'Licenciatura en Análisis y Desarrollo de Sistemas',
     },
     meta: 'Faculdades QI · 2010 – 2013',
   },
@@ -37,6 +41,7 @@ export const education: EducationEntry[] = [
     title: {
       pt: 'Técnico em Informática',
       en: 'IT Technician',
+      es: 'Técnico en Informática',
     },
     meta: 'Faculdade QI · 2008 – 2010',
   },

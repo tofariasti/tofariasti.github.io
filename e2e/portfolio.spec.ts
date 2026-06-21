@@ -33,6 +33,13 @@ test.describe('Portfolio a11y', () => {
     await expect(page.locator('.hero-desc')).toContainText('Senior Backend Developer')
   })
 
+  test('spanish language switch updates content', async ({ page }) => {
+    await acceptCookies(page)
+    await page.goto('./')
+    await page.getByRole('button', { name: 'ES', exact: true }).click()
+    await expect(page.locator('.hero-desc')).toContainText('Desarrollador Backend Senior')
+  })
+
   test('section nav keeps home route and shows target section', async ({ page }) => {
     await acceptCookies(page)
     await page.goto('./')

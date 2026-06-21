@@ -5,6 +5,7 @@ export const WA_MESSAGES: Record<WhatsAppContext, Record<Locale, string>> = {
   dev: {
     pt: 'Olá Tiago, vi seu portfólio de Desenvolvedor de Software e gostaria de conversar sobre uma oportunidade ou projeto.',
     en: 'Hi Tiago, I saw your Software Developer portfolio and would like to discuss an opportunity or project.',
+    es: 'Hola Tiago, vi tu portafolio de Desarrollador de Software y me gustaría conversar sobre una oportunidad o proyecto.',
   },
   drone: {
     pt: [
@@ -36,6 +37,21 @@ export const WA_MESSAGES: Record<WhatsAppContext, Record<Locale, string>> = {
       '• Extra details or references (optional):',
       '',
       'Looking forward to your reply. Thank you!',
+    ].join('\n'),
+    es: [
+      '¡Hola Tiago! Vi Tech Drone 360 y me gustaría solicitar un presupuesto para captación aérea con dron.',
+      '',
+      'Para agilizar la atención, comparto algunos datos:',
+      '',
+      '• Nombre completo:',
+      '• Empresa (si es persona jurídica):',
+      '• Servicio deseado: ( ) Fotos  ( ) Video  ( ) Fotos y video',
+      '• Local / dirección o ciudad de la captación:',
+      '• Fecha o período deseado:',
+      '• Tipo de proyecto: (ej.: evento, inmueble, paisaje, redes sociales)',
+      '• Detalles o referencias (opcional):',
+      '',
+      'Quedo atento a su respuesta. ¡Gracias!',
     ].join('\n'),
   },
 }

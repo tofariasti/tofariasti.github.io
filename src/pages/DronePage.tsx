@@ -60,7 +60,7 @@ export function DronePage() {
               <a href={droneContent.instagram} className="btn btn--outline btn--lg" target="_blank" rel="noopener noreferrer">Instagram</a>
               <a href={waUrl} className="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">{t(uiCopy.whatsapp)}</a>
             </motion.div>
-            <motion.ul className="hero-stats" aria-label={t({ pt: 'Serviços', en: 'Services' })} initial={reduced ? false : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+            <motion.ul className="hero-stats" aria-label={t({ pt: 'Serviços', en: 'Services', es: 'Servicios' })} initial={reduced ? false : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
               {droneContent.stats.map((stat) => (
                 <li key={stat.value}>
                   <strong>{stat.value}</strong>

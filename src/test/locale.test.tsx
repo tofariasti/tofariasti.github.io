@@ -8,8 +8,9 @@ function Probe() {
   return (
     <div>
       <span data-testid="locale">{locale}</span>
-      <span data-testid="text">{t({ pt: 'Olá', en: 'Hello' })}</span>
+      <span data-testid="text">{t({ pt: 'Olá', en: 'Hello', es: 'Hola' })}</span>
       <button type="button" onClick={() => setLocale('en')}>EN</button>
+      <button type="button" onClick={() => setLocale('es')}>ES</button>
     </div>
   )
 }
@@ -31,5 +32,21 @@ describe('LocaleContext', () => {
     expect(screen.getByTestId('locale')).toHaveTextContent('en')
     expect(screen.getByTestId('text')).toHaveTextContent('Hello')
     expect(localStorage.getItem(LANG_KEY)).toBe('en')
+  })
+
+  it('switches to es and sets document lang', () => {
+    localStorage.clear()
+    render(
+      <LocaleProvider>
+        <Probe />
+      </LocaleProvider>,
+    )
+
+    fireEvent.click(screen.getByRole('button', { name: 'ES' }))
+
+    expect(screen.getByTestId('locale')).toHaveTextContent('es')
+    expect(screen.getByTestId('text')).toHaveTextContent('Hola')
+    expect(document.documentElement.lang).toBe('es')
+    expect(localStorage.getItem(LANG_KEY)).toBe('es')
   })
 })

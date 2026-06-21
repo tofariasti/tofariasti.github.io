@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { profile } from '../../data/profile'
+import { highlightsSection } from '../../data/highlights'
 import { uiCopy } from '../../data/navigation'
 import { useLocale } from '../../context/LocaleContext'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
@@ -79,7 +80,7 @@ export function Hero() {
           </motion.div>
           <motion.ul
             className="hero-stats"
-            aria-label={t({ pt: 'Destaques', en: 'Highlights' })}
+            aria-label={t(highlightsSection.tag)}
             initial={reduced ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}

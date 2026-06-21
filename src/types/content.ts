@@ -1,4 +1,6 @@
-export type Locale = 'pt' | 'en'
+export type Locale = 'pt' | 'en' | 'es'
+
+export const LOCALES: Locale[] = ['pt', 'en', 'es']
 
 export type Localized<T> = Record<Locale, T>
 

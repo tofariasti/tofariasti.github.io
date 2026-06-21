@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import type { NavLink as NavLinkType, WhatsAppContext } from '../../types/content'
+import { LOCALES } from '../../types/content'
 import { siteTabs } from '../../data/navigation'
 import { uiCopy } from '../../data/navigation'
 import { profile } from '../../data/profile'
@@ -83,7 +84,7 @@ export function Header({
           <div className="nav-top">
             <SiteTabs tabs={siteTabs} activeId={variant} />
             <div className="lang-switch" role="group" aria-label={t(uiCopy.langGroup)}>
-              {(['pt', 'en'] as const).map((lang) => (
+              {LOCALES.map((lang) => (
                 <button
                   key={lang}
                   type="button"
@@ -153,7 +154,7 @@ export function Header({
         <SiteTabs tabs={siteTabs} activeId={variant} compact />
         {variant === 'drone' && (
           <a href="https://techdrone360.com.br/" className="nav-mobile-site" target="_blank" rel="noopener noreferrer" onClick={closeMobile}>
-            {t({ pt: 'Visitar techdrone360.com.br', en: 'Visit techdrone360.com.br' })}
+            {t({ pt: 'Visitar techdrone360.com.br', en: 'Visit techdrone360.com.br', es: 'Visitar techdrone360.com.br' })}
           </a>
         )}
         {hashNavLinks.map((link) => (

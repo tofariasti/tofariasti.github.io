@@ -1,7 +1,7 @@
 import { HashRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { CookieProvider } from './context/CookieContext'
-import { LocaleProvider } from './context/LocaleContext'
+import { LocaleProvider, useLocale } from './context/LocaleContext'
 import { CookieModal } from './components/layout/CookieModal'
 import { Footer } from './components/layout/Footer'
 import { Header } from './components/layout/Header'
@@ -15,11 +15,12 @@ import { useSectionHashRecovery } from './hooks/useSectionHashRecovery'
 
 function DocumentHead() {
   const { pathname } = useLocation()
+  const { locale, t } = useLocale()
   const isDrone = pathname === '/drone'
   const meta = isDrone ? seoMeta.drone : seoMeta.dev
 
   useEffect(() => {
-    document.title = meta.title
+    document.title = t(meta.title)
     const setMeta = (name: string, content: string, property = false) => {
       const attr = property ? 'property' : 'name'
       let el = document.querySelector(`meta[${attr}="${name}"]`)
@@ -30,14 +31,14 @@ function DocumentHead() {
       }
       el.setAttribute('content', content)
     }
-    setMeta('description', meta.description)
-    setMeta('og:title', meta.ogTitle, true)
-    setMeta('og:description', meta.ogDescription, true)
+    setMeta('description', t(meta.description))
+    setMeta('og:title', t(meta.ogTitle), true)
+    setMeta('og:description', t(meta.ogDescription), true)
     setMeta('og:image', PHOTO_URL, true)
     setMeta('og:url', isDrone ? `${SITE_URL}#/drone` : SITE_URL, true)
     setMeta('og:type', 'website', true)
     document.body.classList.toggle('page-drone', isDrone)
-  }, [isDrone, meta])
+  }, [isDrone, locale, meta, t])
 
   return null
 }

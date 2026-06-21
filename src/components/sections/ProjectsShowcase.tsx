@@ -34,7 +34,7 @@ export function ProjectsShowcase() {
           <p className="section-lead"><LocalizedText value={projectsSection.lead!} /></p>
         </AnimatedSection>
 
-        <div className="project-filters" role="tablist" aria-label={t({ pt: 'Filtrar projetos', en: 'Filter projects' })}>
+        <div className="project-filters" role="tablist" aria-label={t({ pt: 'Filtrar projetos', en: 'Filter projects', es: 'Filtrar proyectos' })}>
           {filters.map(({ id, label }) => (
             <button
               key={id}

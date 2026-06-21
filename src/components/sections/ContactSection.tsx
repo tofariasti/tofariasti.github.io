@@ -1,5 +1,5 @@
 import { contactCopy, profile } from '../../data/profile'
-import { droneContent } from '../../data/drone'
+import { droneContent, droneFooterCopy } from '../../data/drone'
 import { uiCopy } from '../../data/navigation'
 import { useLocale } from '../../context/LocaleContext'
 import { buildWhatsAppUrl } from '../../utils/whatsapp'
@@ -30,7 +30,7 @@ export function ContactSection({ variant = 'dev' }: ContactSectionProps) {
       <section className="section section--alt contact-section" id="contacto">
         <div className="container contact-inner">
           <AnimatedSection>
-            <span className="tag tag--accent"><LocalizedText value={{ pt: 'Contato', en: 'Contact' }} /></span>
+            <span className="tag tag--accent"><LocalizedText value={contactCopy.tag} /></span>
             <h2 className="section-title"><LocalizedText value={droneContent.contactTitle} /></h2>
             <p className="contact-text">
               <RichText text={t(droneContent.contactText)} as="span" />
@@ -38,7 +38,7 @@ export function ContactSection({ variant = 'dev' }: ContactSectionProps) {
           </AnimatedSection>
           <AnimatedSection className="contact-actions" delay={80}>
             <a href={droneContent.officialSite} className="btn btn--cv btn--lg" target="_blank" rel="noopener noreferrer">
-              {t({ pt: 'Site TechDrone360', en: 'TechDrone360 website' })}
+              {t(droneFooterCopy.siteCta)}
             </a>
             <a href={waUrl} className="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
               {t(uiCopy.whatsappChat)}
