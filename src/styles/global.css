@@ -2,8 +2,9 @@
   --bg: #0f1419;
   --bg-alt: #151b23;
   --bg-card: #1a222d;
-  --text: #e2e8f0;
-  --text-muted: #94a3b8;
+  --text: #f1f5f9;
+  --text-body: #c8d1dc;
+  --text-muted: #9aa8ba;
   --accent: #38bdf8;
   --accent-2: #22d3ee;
   --accent-dim: rgba(56, 189, 248, 0.15);
@@ -16,9 +17,24 @@
   --radius-lg: 16px;
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
   --nav-glow: rgba(56, 189, 248, 0.12);
-  --font-display: 'Syne', 'Inter', system-ui, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  /* Type scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: clamp(1.75rem, 3.5vw, 2.5rem);
+  --text-2xl: clamp(2.25rem, 5.5vw, 3.25rem);
+  --leading-tight: 1.12;
+  --leading-snug: 1.35;
+  --leading-normal: 1.65;
+  --leading-relaxed: 1.75;
+  --tracking-tight: -0.035em;
+  --tracking-snug: -0.02em;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.12em;
 }
 
 *,
@@ -37,9 +53,15 @@ html {
 
 body {
   font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  color: var(--text-body);
+  line-height: var(--leading-normal);
   padding-top: var(--header-h);
   position: relative;
   overflow-x: hidden;
@@ -50,8 +72,34 @@ body.cookie-modal-open {
   overflow: hidden;
 }
 
-h1, h2, h3, .logo-text, .section-title {
+h1, h2, h3, h4, .logo-text, .section-title {
   font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-snug);
+  color: var(--text);
+  text-wrap: balance;
+}
+
+h1 {
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+}
+
+h2.section-title {
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.prose strong,
+.about-p strong,
+.hero-desc strong,
+.highlight-card strong,
+.section-lead strong,
+.timeline-bullets strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 a {
