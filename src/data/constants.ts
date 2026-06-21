@@ -1,0 +1,12 @@
+export const LANG_KEY = 'tofariasti_lang_v1'
+export const COOKIE_KEY = 'tofariasti_cookie_policy_v1'
+export const WHATSAPP_NUMBER = '5551989030405'
+
+export const CONTACT_EMAIL = 'tiago.farias.poa@gmail.com'
+export const LINKEDIN_URL = 'https://linkedin.com/in/tiago-farias1985'
+export const GITHUB_URL = 'https://github.com/tofariasti'
+export const PHOTO_URL = 'https://avatars.githubusercontent.com/u/131496768?v=4'
+export const CV_PDF = 'assets/curriculo-ats.pdf'
+export const CV_PDF_DOWNLOAD = 'Tiago-O-de-Farias-Curriculo.pdf'
+export const CV_HTML = 'assets/curriculo-ats.html'
+export const SITE_URL = 'https://tofariasti.github.io/'
