@@ -26,13 +26,13 @@
   --text-base: 1.0625rem;
   --text-lg: 1.1875rem;
   --text-xl: clamp(1.75rem, 3.5vw, 2.5rem);
-  --text-2xl: clamp(2.25rem, 5.5vw, 3.25rem);
-  --leading-tight: 1.12;
+  --text-2xl: clamp(2rem, 4.5vw, 2.85rem);
+  --leading-tight: 1.15;
   --leading-snug: 1.35;
   --leading-normal: 1.65;
   --leading-relaxed: 1.75;
-  --tracking-tight: -0.035em;
-  --tracking-snug: -0.02em;
+  --tracking-tight: -0.025em;
+  --tracking-snug: -0.015em;
   --tracking-wide: 0.08em;
   --tracking-wider: 0.12em;
 }
@@ -72,7 +72,21 @@ body.cookie-modal-open {
   overflow: hidden;
 }
 
-h1, h2, h3, h4, .logo-text, .section-title {
+h1 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--text);
+}
+
+h2.section-title,
+h3.display-title,
+.timeline-item h3,
+.project-card h3,
+.edu-card h3,
+.certs-title,
+.skill-group h3 {
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: var(--tracking-snug);
@@ -80,16 +94,16 @@ h1, h2, h3, h4, .logo-text, .section-title {
   text-wrap: balance;
 }
 
-h1 {
-  font-weight: 800;
-  letter-spacing: var(--tracking-tight);
-  line-height: var(--leading-tight);
-}
-
 h2.section-title {
   font-size: var(--text-xl);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
+}
+
+.logo-text {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .prose strong,
