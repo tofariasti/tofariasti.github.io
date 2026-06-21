@@ -11,6 +11,7 @@ import { devNavLinks, droneNavLinks } from './data/navigation'
 import { PHOTO_URL, SITE_URL } from './data/constants'
 import { DevPortfolioPage } from './pages/DevPortfolioPage'
 import { DronePage } from './pages/DronePage'
+import { useSectionHashRecovery } from './hooks/useSectionHashRecovery'
 
 function DocumentHead() {
   const { pathname } = useLocation()
@@ -44,6 +45,7 @@ function DocumentHead() {
 function AppShell() {
   const { pathname } = useLocation()
   const isDrone = pathname === '/drone'
+  useSectionHashRecovery()
 
   return (
     <>

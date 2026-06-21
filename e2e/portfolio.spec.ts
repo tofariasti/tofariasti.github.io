@@ -32,4 +32,20 @@ test.describe('Portfolio a11y', () => {
     await page.getByRole('button', { name: 'EN', exact: true }).click()
     await expect(page.locator('.hero-desc')).toContainText('Senior Backend Developer')
   })
+
+  test('section nav keeps home route and shows target section', async ({ page }) => {
+    await acceptCookies(page)
+    await page.goto('./')
+    await page.getByRole('navigation', { name: 'Principal' }).getByRole('link', { name: 'Freelance' }).click()
+    await expect(page).not.toHaveURL(/freelance/)
+    await expect(page.locator('#freelance')).toBeVisible()
+    await expect(page.locator('#freelance h2')).toContainText(/freelance/i)
+  })
+
+  test('legacy section hash recovers to home route', async ({ page }) => {
+    await acceptCookies(page)
+    await page.goto('./#/freelance')
+    await expect(page).not.toHaveURL(/\/freelance$/)
+    await expect(page.locator('#freelance')).toBeVisible()
+  })
 })

@@ -8,6 +8,7 @@ import { useLocale } from '../../context/LocaleContext'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import { useHeaderHeight } from '../../hooks/useHeaderHeight'
 import { buildWhatsAppUrl } from '../../utils/whatsapp'
+import { handleSectionNav } from '../../utils/scroll'
 import { SiteTabs } from './SiteTabs'
 
 interface HeaderProps {
@@ -106,6 +107,7 @@ export function Header({
                   <a
                     href={link.href}
                     className={activeSection === link.href.slice(1) ? 'is-active' : undefined}
+                    onClick={(e) => handleSectionNav(e, link.href.slice(1))}
                   >
                     {t(link.label)}
                   </a>
@@ -155,7 +157,14 @@ export function Header({
           </a>
         )}
         {hashNavLinks.map((link) => (
-          <a key={link.id} href={link.href} onClick={closeMobile}>
+          <a
+            key={link.id}
+            href={link.href}
+            onClick={(e) => {
+              handleSectionNav(e, link.href.slice(1))
+              closeMobile()
+            }}
+          >
             {t(link.label)}
           </a>
         ))}
