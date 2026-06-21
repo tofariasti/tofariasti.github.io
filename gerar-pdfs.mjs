@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const assetsDir = path.join(__dirname, 'assets');
+const assetsDir = path.join(__dirname, 'public', 'assets');
 
 const arquivos = [
   { html: 'curriculo-ats.html',                pdf: 'curriculo-ats.pdf' },
