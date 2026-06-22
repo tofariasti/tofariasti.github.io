@@ -324,6 +324,7 @@ header.scrolled .nav-floating {
 
 .lang-switch {
   display: flex;
+  flex-shrink: 0;
   padding: 2px;
   border-radius: 999px;
   background: rgba(15, 20, 25, 0.5);
@@ -1625,7 +1626,12 @@ body.cookie-modal-open {
   .site-tabs {
     flex: 1;
     min-width: 0;
-    max-width: calc(100% - 3.5rem);
+    max-width: calc(100% - 6.75rem);
+  }
+
+  .lang-btn {
+    padding: 0.28rem 0.42rem;
+    font-size: 0.65rem;
   }
 
   .site-tab {
